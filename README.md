@@ -1,4 +1,4 @@
-# CS5555 - Lab4 (jhh283)
+# CS5555 - Lab4 (jhh283 + jd837)
 
 This directory assumes the following:
 * data files are found in a data/ directory in root
