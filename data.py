@@ -11,7 +11,10 @@ host = dataloader['host']
 username = dataloader['username']
 shim = dataloader['shim']
 start = dataloader['start']
-end = datetime.datetime.today().strftime('%Y-%m-%d')
+try:
+    end = dataloader['end']
+except:
+    end = datetime.datetime.today().strftime('%Y-%m-%d')
 normalize = dataloader['normalize']
 endpoints = dataloader['endpoints']
 
