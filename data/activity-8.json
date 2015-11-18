@@ -1,0 +1,1894 @@
+{
+  "body": [
+    {
+      "result": {
+        "date": "2015-08-01",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 5.77,
+                "activity": "total"
+              },
+              {
+                "distance": 5.77,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 1.61,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.29,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 3.87,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 39.62,
+            "sedentaryMinutes": 1236,
+            "lightlyActiveMinutes": 183,
+            "caloriesOut": 2321,
+            "caloriesBMR": 1657,
+            "marginalCalories": 477,
+            "fairlyActiveMinutes": 7,
+            "veryActiveMinutes": 14,
+            "activityCalories": 869,
+            "steps": 7488,
+            "floors": 13,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-02",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 8.7,
+                "activity": "total"
+              },
+              {
+                "distance": 8.7,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 2.19,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.21,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 5.3,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 128.02,
+            "sedentaryMinutes": 1176,
+            "lightlyActiveMinutes": 211,
+            "caloriesOut": 2594,
+            "caloriesBMR": 1657,
+            "marginalCalories": 702,
+            "fairlyActiveMinutes": 24,
+            "veryActiveMinutes": 29,
+            "activityCalories": 1205,
+            "steps": 11775,
+            "floors": 42,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-03",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 10.98,
+                "activity": "total"
+              },
+              {
+                "distance": 10.98,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 6.77,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.13,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 3.07,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 176.78,
+            "sedentaryMinutes": 1245,
+            "lightlyActiveMinutes": 119,
+            "caloriesOut": 2688,
+            "caloriesBMR": 1657,
+            "marginalCalories": 853,
+            "fairlyActiveMinutes": 23,
+            "veryActiveMinutes": 53,
+            "activityCalories": 1227,
+            "steps": 13322,
+            "floors": 58,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-04",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 6.42,
+                "activity": "total"
+              },
+              {
+                "distance": 6.42,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 1.42,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.23,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 4.77,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 30.48,
+            "sedentaryMinutes": 1279,
+            "lightlyActiveMinutes": 138,
+            "caloriesOut": 2309,
+            "caloriesBMR": 1657,
+            "marginalCalories": 502,
+            "fairlyActiveMinutes": 4,
+            "veryActiveMinutes": 19,
+            "activityCalories": 808,
+            "steps": 8693,
+            "floors": 10,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-05",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 2.96,
+                "activity": "total"
+              },
+              {
+                "distance": 2.96,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 0.27,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.54,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 2.15,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 15.24,
+            "sedentaryMinutes": 1359,
+            "lightlyActiveMinutes": 66,
+            "caloriesOut": 1950,
+            "caloriesBMR": 1657,
+            "marginalCalories": 225,
+            "fairlyActiveMinutes": 11,
+            "veryActiveMinutes": 4,
+            "activityCalories": 376,
+            "steps": 4008,
+            "floors": 5,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-06",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 0,
+                "activity": "total"
+              },
+              {
+                "distance": 0,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 0,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 0,
+            "sedentaryMinutes": 1440,
+            "lightlyActiveMinutes": 0,
+            "caloriesOut": 1657,
+            "caloriesBMR": 1657,
+            "marginalCalories": 0,
+            "fairlyActiveMinutes": 0,
+            "veryActiveMinutes": 0,
+            "activityCalories": 0,
+            "steps": 0,
+            "floors": 0,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-07",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 1.78,
+                "activity": "total"
+              },
+              {
+                "distance": 1.78,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 0,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 1.78,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 33.53,
+            "sedentaryMinutes": 1350,
+            "lightlyActiveMinutes": 90,
+            "caloriesOut": 1901,
+            "caloriesBMR": 1657,
+            "marginalCalories": 158,
+            "fairlyActiveMinutes": 0,
+            "veryActiveMinutes": 0,
+            "activityCalories": 333,
+            "steps": 2406,
+            "floors": 11,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-08",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 13.07,
+                "activity": "total"
+              },
+              {
+                "distance": 13.07,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 10.01,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.33,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 2.73,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 161.54,
+            "sedentaryMinutes": 1232,
+            "lightlyActiveMinutes": 125,
+            "caloriesOut": 2862,
+            "caloriesBMR": 1657,
+            "marginalCalories": 1016,
+            "fairlyActiveMinutes": 8,
+            "veryActiveMinutes": 75,
+            "activityCalories": 1425,
+            "steps": 15408,
+            "floors": 53,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-09",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 16.62,
+                "activity": "total"
+              },
+              {
+                "distance": 16.62,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 6.14,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 4.66,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 5.82,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 219.46,
+            "sedentaryMinutes": 1023,
+            "lightlyActiveMinutes": 244,
+            "caloriesOut": 3302,
+            "caloriesBMR": 1657,
+            "marginalCalories": 1301,
+            "fairlyActiveMinutes": 90,
+            "veryActiveMinutes": 83,
+            "activityCalories": 2100,
+            "steps": 22489,
+            "floors": 72,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-10",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 4.95,
+                "activity": "total"
+              },
+              {
+                "distance": 4.95,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 1.55,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.93,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 2.47,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 24.38,
+            "sedentaryMinutes": 1291,
+            "lightlyActiveMinutes": 110,
+            "caloriesOut": 2207,
+            "caloriesBMR": 1657,
+            "marginalCalories": 393,
+            "fairlyActiveMinutes": 17,
+            "veryActiveMinutes": 22,
+            "activityCalories": 681,
+            "steps": 6700,
+            "floors": 8,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-11",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 7.7,
+                "activity": "total"
+              },
+              {
+                "distance": 7.7,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 1.97,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.6,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 5.13,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 45.72,
+            "sedentaryMinutes": 1223,
+            "lightlyActiveMinutes": 187,
+            "caloriesOut": 2473,
+            "caloriesBMR": 1657,
+            "marginalCalories": 619,
+            "fairlyActiveMinutes": 12,
+            "veryActiveMinutes": 18,
+            "activityCalories": 1029,
+            "steps": 10062,
+            "floors": 15,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-12",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 12.54,
+                "activity": "total"
+              },
+              {
+                "distance": 12.54,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 7.75,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.95,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 2.85,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 195.07,
+            "sedentaryMinutes": 1213,
+            "lightlyActiveMinutes": 121,
+            "caloriesOut": 2835,
+            "caloriesBMR": 1657,
+            "marginalCalories": 964,
+            "fairlyActiveMinutes": 42,
+            "veryActiveMinutes": 64,
+            "activityCalories": 1404,
+            "steps": 15337,
+            "floors": 64,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-13",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 7.18,
+                "activity": "total"
+              },
+              {
+                "distance": 7.18,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 0.81,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.85,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 5.53,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 57.91,
+            "sedentaryMinutes": 1174,
+            "lightlyActiveMinutes": 236,
+            "caloriesOut": 2494,
+            "caloriesBMR": 1657,
+            "marginalCalories": 591,
+            "fairlyActiveMinutes": 19,
+            "veryActiveMinutes": 11,
+            "activityCalories": 1102,
+            "steps": 9722,
+            "floors": 19,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-14",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 6.14,
+                "activity": "total"
+              },
+              {
+                "distance": 6.14,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 0.07,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.53,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 5.54,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 48.77,
+            "sedentaryMinutes": 1225,
+            "lightlyActiveMinutes": 200,
+            "caloriesOut": 2345,
+            "caloriesBMR": 1657,
+            "marginalCalories": 485,
+            "fairlyActiveMinutes": 14,
+            "veryActiveMinutes": 1,
+            "activityCalories": 898,
+            "steps": 8308,
+            "floors": 16,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-15",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 10.55,
+                "activity": "total"
+              },
+              {
+                "distance": 10.55,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 5.29,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.02,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 4.23,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 121.92,
+            "sedentaryMinutes": 1148,
+            "lightlyActiveMinutes": 215,
+            "caloriesOut": 2757,
+            "caloriesBMR": 1657,
+            "marginalCalories": 844,
+            "fairlyActiveMinutes": 22,
+            "veryActiveMinutes": 55,
+            "activityCalories": 1407,
+            "steps": 13579,
+            "floors": 40,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-16",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 13.82,
+                "activity": "total"
+              },
+              {
+                "distance": 13.82,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 5.85,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 2.71,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 5.26,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 143.26,
+            "sedentaryMinutes": 669,
+            "lightlyActiveMinutes": 255,
+            "caloriesOut": 3099,
+            "caloriesBMR": 1656,
+            "marginalCalories": 1109,
+            "fairlyActiveMinutes": 53,
+            "veryActiveMinutes": 77,
+            "activityCalories": 1848,
+            "steps": 18702,
+            "floors": 47,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-17",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 8.36,
+                "activity": "total"
+              },
+              {
+                "distance": 8.36,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 1,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.65,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 6.71,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 88.39,
+            "sedentaryMinutes": 1127,
+            "lightlyActiveMinutes": 286,
+            "caloriesOut": 2607,
+            "caloriesBMR": 1656,
+            "marginalCalories": 680,
+            "fairlyActiveMinutes": 14,
+            "veryActiveMinutes": 13,
+            "activityCalories": 1281,
+            "steps": 11317,
+            "floors": 29,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-18",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 9.99,
+                "activity": "total"
+              },
+              {
+                "distance": 9.99,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 6.97,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.33,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 2.68,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 182.88,
+            "sedentaryMinutes": 1259,
+            "lightlyActiveMinutes": 125,
+            "caloriesOut": 2608,
+            "caloriesBMR": 1656,
+            "marginalCalories": 795,
+            "fairlyActiveMinutes": 8,
+            "veryActiveMinutes": 48,
+            "activityCalories": 1136,
+            "steps": 11693,
+            "floors": 60,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-19",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 12.27,
+                "activity": "total"
+              },
+              {
+                "distance": 12.27,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 4.22,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 2.27,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 5.79,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 94.49,
+            "sedentaryMinutes": 1126,
+            "lightlyActiveMinutes": 213,
+            "caloriesOut": 2881,
+            "caloriesBMR": 1656,
+            "marginalCalories": 955,
+            "fairlyActiveMinutes": 46,
+            "veryActiveMinutes": 55,
+            "activityCalories": 1560,
+            "steps": 16610,
+            "floors": 31,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-20",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 17.55,
+                "activity": "total"
+              },
+              {
+                "distance": 17.55,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 12.13,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.98,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 3.44,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 88.39,
+            "sedentaryMinutes": 1156,
+            "lightlyActiveMinutes": 125,
+            "caloriesOut": 3246,
+            "caloriesBMR": 1656,
+            "marginalCalories": 1348,
+            "fairlyActiveMinutes": 42,
+            "veryActiveMinutes": 117,
+            "activityCalories": 1900,
+            "steps": 22047,
+            "floors": 29,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-21",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 13.11,
+                "activity": "total"
+              },
+              {
+                "distance": 13.11,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 5.31,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.97,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 5.83,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 85.34,
+            "sedentaryMinutes": 1124,
+            "lightlyActiveMinutes": 214,
+            "caloriesOut": 2950,
+            "caloriesBMR": 1656,
+            "marginalCalories": 1024,
+            "fairlyActiveMinutes": 40,
+            "veryActiveMinutes": 62,
+            "activityCalories": 1630,
+            "steps": 17453,
+            "floors": 28,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-22",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 21.04,
+                "activity": "total"
+              },
+              {
+                "distance": 21.04,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 16.56,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.53,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 2.95,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 143.26,
+            "sedentaryMinutes": 1196,
+            "lightlyActiveMinutes": 71,
+            "caloriesOut": 3454,
+            "caloriesBMR": 1656,
+            "marginalCalories": 1602,
+            "fairlyActiveMinutes": 30,
+            "veryActiveMinutes": 143,
+            "activityCalories": 2073,
+            "steps": 25399,
+            "floors": 47,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-23",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 12.41,
+                "activity": "total"
+              },
+              {
+                "distance": 12.41,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 5.99,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 2.41,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 4.01,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 73.15,
+            "sedentaryMinutes": 1114,
+            "lightlyActiveMinutes": 205,
+            "caloriesOut": 2924,
+            "caloriesBMR": 1656,
+            "marginalCalories": 994,
+            "fairlyActiveMinutes": 47,
+            "veryActiveMinutes": 74,
+            "activityCalories": 1619,
+            "steps": 16523,
+            "floors": 24,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-24",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 12.9,
+                "activity": "total"
+              },
+              {
+                "distance": 12.9,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 10.68,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.74,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 1.47,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 9.14,
+            "sedentaryMinutes": 1245,
+            "lightlyActiveMinutes": 86,
+            "caloriesOut": 2839,
+            "caloriesBMR": 1656,
+            "marginalCalories": 1005,
+            "fairlyActiveMinutes": 16,
+            "veryActiveMinutes": 93,
+            "activityCalories": 1389,
+            "steps": 15548,
+            "floors": 3,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-25",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 9.92,
+                "activity": "total"
+              },
+              {
+                "distance": 9.92,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 4.81,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.44,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 3.67,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 36.58,
+            "sedentaryMinutes": 1205,
+            "lightlyActiveMinutes": 152,
+            "caloriesOut": 2651,
+            "caloriesBMR": 1656,
+            "marginalCalories": 782,
+            "fairlyActiveMinutes": 30,
+            "veryActiveMinutes": 53,
+            "activityCalories": 1236,
+            "steps": 13092,
+            "floors": 12,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-26",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 16.66,
+                "activity": "total"
+              },
+              {
+                "distance": 16.66,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 11.78,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.97,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 3.91,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 45.72,
+            "sedentaryMinutes": 1179,
+            "lightlyActiveMinutes": 132,
+            "caloriesOut": 3166,
+            "caloriesBMR": 1656,
+            "marginalCalories": 1296,
+            "fairlyActiveMinutes": 21,
+            "veryActiveMinutes": 108,
+            "activityCalories": 1795,
+            "steps": 20664,
+            "floors": 15,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-27",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 6.95,
+                "activity": "total"
+              },
+              {
+                "distance": 6.95,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 3.92,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.64,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 2.39,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 48.77,
+            "sedentaryMinutes": 1295,
+            "lightlyActiveMinutes": 82,
+            "caloriesOut": 2326,
+            "caloriesBMR": 1656,
+            "marginalCalories": 537,
+            "fairlyActiveMinutes": 13,
+            "veryActiveMinutes": 50,
+            "activityCalories": 818,
+            "steps": 9400,
+            "floors": 16,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-28",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 11.97,
+                "activity": "total"
+              },
+              {
+                "distance": 11.97,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 6.18,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.81,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 3.98,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 39.62,
+            "sedentaryMinutes": 1164,
+            "lightlyActiveMinutes": 155,
+            "caloriesOut": 2809,
+            "caloriesBMR": 1656,
+            "marginalCalories": 919,
+            "fairlyActiveMinutes": 38,
+            "veryActiveMinutes": 83,
+            "activityCalories": 1456,
+            "steps": 16197,
+            "floors": 13,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-29",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 14.72,
+                "activity": "total"
+              },
+              {
+                "distance": 14.72,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 7.94,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 3.63,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 3.15,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 57.91,
+            "sedentaryMinutes": 1131,
+            "lightlyActiveMinutes": 135,
+            "caloriesOut": 3050,
+            "caloriesBMR": 1656,
+            "marginalCalories": 1128,
+            "fairlyActiveMinutes": 71,
+            "veryActiveMinutes": 103,
+            "activityCalories": 1728,
+            "steps": 19771,
+            "floors": 19,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-30",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 8.81,
+                "activity": "total"
+              },
+              {
+                "distance": 8.81,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 5.55,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.35,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 1.91,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 36.58,
+            "sedentaryMinutes": 1132,
+            "lightlyActiveMinutes": 82,
+            "caloriesOut": 2484,
+            "caloriesBMR": 1656,
+            "marginalCalories": 678,
+            "fairlyActiveMinutes": 28,
+            "veryActiveMinutes": 67,
+            "activityCalories": 1021,
+            "steps": 11760,
+            "floors": 12,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-08-31",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 7.68,
+                "activity": "total"
+              },
+              {
+                "distance": 7.68,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 3.63,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 0.39,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 3.67,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 51.82,
+            "sedentaryMinutes": 1213,
+            "lightlyActiveMinutes": 173,
+            "caloriesOut": 2483,
+            "caloriesBMR": 1656,
+            "marginalCalories": 619,
+            "fairlyActiveMinutes": 8,
+            "veryActiveMinutes": 46,
+            "activityCalories": 1062,
+            "steps": 10397,
+            "floors": 17,
+            "activeScore": -1
+          }
+        }
+      }
+    },
+    {
+      "result": {
+        "date": "2015-09-01",
+        "content": {
+          "activities": [],
+          "goals": {
+            "activeMinutes": 30,
+            "distance": 8.05,
+            "caloriesOut": 2826,
+            "steps": 10000,
+            "floors": 10
+          },
+          "summary": {
+            "distances": [
+              {
+                "distance": 14.53,
+                "activity": "total"
+              },
+              {
+                "distance": 14.53,
+                "activity": "tracker"
+              },
+              {
+                "distance": 0,
+                "activity": "loggedActivities"
+              },
+              {
+                "distance": 8.32,
+                "activity": "veryActive"
+              },
+              {
+                "distance": 1.78,
+                "activity": "moderatelyActive"
+              },
+              {
+                "distance": 4.42,
+                "activity": "lightlyActive"
+              },
+              {
+                "distance": 0,
+                "activity": "sedentaryActive"
+              }
+            ],
+            "elevation": 27.43,
+            "sedentaryMinutes": 1148,
+            "lightlyActiveMinutes": 149,
+            "caloriesOut": 3026,
+            "caloriesBMR": 1656,
+            "marginalCalories": 1111,
+            "fairlyActiveMinutes": 39,
+            "veryActiveMinutes": 104,
+            "activityCalories": 1680,
+            "steps": 19661,
+            "floors": 9,
+            "activeScore": -1
+          }
+        }
+      }
+    }
+  ],
+  "timeStamp": 1447806481,
+  "shim": "fitbit"
+}
