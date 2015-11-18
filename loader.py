@@ -31,18 +31,15 @@ class Stats(object):
 
 
 def load_json(filename, rows, label):
+    label = 'activity'
     with open(filename, 'rb') as f:
         data = json.load(f)
         data = data['body']
         # i hate these if statements...
-        if label == 'weight':
-            data = data['weight']
         for datum in data:
-            if label != 'weight':
-                datum = datum['result']
+            datum = datum['result']
             date = datum['date']
-            if label != 'weight':
-                datum = datum['content']
+            datum = datum['content']
             for key in datum:
                 if rows[date].date is None:
                     rows[date].date = convert_dt(date)
@@ -59,4 +56,4 @@ def load_files():
 
 if __name__ == '__main__':
     out = load_files()
-    print out['2015-10-16'].activity
+    print out['2015-01-08'].activity
