@@ -1,10 +1,11 @@
 import os
+import json
 
 from flask import Flask, request, Response
 from flask import render_template, url_for, redirect, send_from_directory
 from flask import send_file, make_response, abort
 
-from angular_flask import app
+from angular_flask import app, data
 
 # routing for API endpoints, generated from the models designated as API_MODELS
 from angular_flask.core import api_manager
@@ -24,6 +25,13 @@ session = api_manager.session
 @app.route('/about')
 def basic_pages(**kwargs):
     return make_response(open('angular_flask/templates/index.html').read())
+
+
+@app.route('/data')
+def get_data():
+    # data is available here
+    out = data['2015-01-08'].activity
+    return json.dumps(out)
 
 
 # routing for CRUD-style endpoints
