@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('AngularFlask', ['angularFlaskServices', 'highcharts-ng'])
+angular.module('AngularFlask', ['angularFlaskServices'])
 	.config(['$routeProvider', '$locationProvider',
 		function($routeProvider, $locationProvider) {
 		$routeProvider
