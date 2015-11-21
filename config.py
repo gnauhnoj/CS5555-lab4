@@ -1,5 +1,6 @@
 # config file for loading / saving fitbit files from mhealth shimmer
 filemap = {
+  0: 'activity-0.json',
   1: 'activity-1.json',
   2: 'activity-2.json',
   3: 'activity-3.json',
@@ -17,8 +18,8 @@ dataloader = {
   'username': 'gnauhnoj',
   'shim': 'fitbit',
   # change start/end to pull different data periods
-  'start': '2015-11-01',
-  # 'end': '2015-11-01'
-  'normalize': 'true',
+  'start': '2014-11-01',
+  'end': '2015-01-01',
+  'normalize': 'false',
   'endpoints': ['activity']
 }
