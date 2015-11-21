@@ -19,6 +19,6 @@ dataloader = {
   # change start/end to pull different data periods
   'start': '2015-11-01',
   # 'end': '2015-11-01'
-  'normalize': 'false',
+  'normalize': 'true',
   'endpoints': ['activity']
 }
