@@ -50,7 +50,7 @@ def load_json(filename, rows, label):
 def load_files():
     rows = defaultdict(Stats)
     for label, filename in filemap.iteritems():
-        fn = 'data/{filename}'.format(filename=filename)
+        fn = 'angular_flask/data_processing/data/{filename}'.format(filename=filename)
         load_json(fn, rows, label)
     return rows
 
