@@ -7,5 +7,17 @@ angular.module('angularFlaskServices', ['ngResource'])
         method: 'POST',
       }
     });
-  })
-;
+});
+
+angular.module('dataServices', [])
+  .service('dataStore', function($rootScope, getData) {
+    this.uploadData = {};
+    this.storedData = undefined;
+
+    this.retrieveData = function(dataStore, cb) {
+      getData.retrieve(this.uploadData, function(data) {
+        dataStore.storedData = data;
+        cb(data);
+      });
+    };
+});
