@@ -39,6 +39,7 @@ def process_data():
     try:
         out = req['data']
     except:
+        # out should be data for plots...
         out = data['2015-01-08'].activity
     return json.dumps(out)
 
