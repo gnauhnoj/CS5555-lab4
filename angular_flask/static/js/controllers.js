@@ -5,7 +5,20 @@ var IndexController = function($scope, dataStore) {
 };
 
 var AnalysisController = function($scope, dataStore) {
-  console.log(dataStore.storedData);
+    $scope.formData = {};
+    $scope.formData.dates = [[null, null]];
+
+    // add defaulting code
+
+    $scope.addDate = function() {
+        $scope.formData.dates.push([null, null]);
+    };
+
+    $scope.deleteDate = function() {
+        $scope.formData.dates.splice(this.$index, 1);
+    };
+
+    // write method to send dates for analysis
 };
 
 var RecommendationsController = function($scope, dataStore) {
