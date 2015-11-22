@@ -11,6 +11,9 @@ from angular_flask import app, data
 from angular_flask.core import api_manager
 from angular_flask.models import *
 
+from sqlalchemy.sql import exists
+
+
 for model_name in app.config['API_MODELS']:
     model_class = app.config['API_MODELS'][model_name]
     api_manager.create_api(model_class, methods=['GET', 'POST'])
@@ -36,7 +39,6 @@ def get_data():
 
 # routing for CRUD-style endpoints
 # passes routing onto the angular frontend if the requested resource exists
-from sqlalchemy.sql import exists
 
 crud_url_models = app.config['CRUD_URL_MODELS']
 

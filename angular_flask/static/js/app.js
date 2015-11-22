@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('AngularFlask', ['angularFlaskServices'])
+angular.module('AngularFlask', [])
 	.config(['$routeProvider', '$locationProvider',
 		function($routeProvider, $locationProvider) {
 		$routeProvider
@@ -12,14 +12,6 @@ angular.module('AngularFlask', ['angularFlaskServices'])
 			templateUrl: 'static/partials/about.html',
 			controller: AboutController
 		})
-		// .when('/post', {
-		// 	templateUrl: 'static/partials/post-list.html',
-		// 	controller: PostListController
-		// })
-		// .when('/post/:postId', {
-		// 	templateUrl: '/static/partials/post-detail.html',
-		// 	controller: PostDetailController
-		// })
 		/* Create a "/blog" route that takes the user to the same place as "/post" */
 		.when('/graphs', {
 			templateUrl: 'static/partials/graphs.html',
