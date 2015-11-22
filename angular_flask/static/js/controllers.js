@@ -8,7 +8,7 @@ var AnalysisController = function($scope, dataStore) {
     $scope.formData = {};
     $scope.formData.dates = [[null, null]];
 
-    // add defaulting code
+    // add defaulting code - options - internship, sickness, summer, reset
 
     $scope.addDate = function() {
         $scope.formData.dates.push([null, null]);
