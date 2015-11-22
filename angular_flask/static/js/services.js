@@ -1,3 +1,4 @@
+(function() {
 'use strict';
 
 angular.module('angularFlaskServices', ['ngResource'])
@@ -21,3 +22,4 @@ angular.module('dataServices', [])
       });
     };
 });
+})();

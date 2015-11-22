@@ -1,4 +1,5 @@
-// 'use strict';
+(function() {
+'use strict';
 
 // /* Controllers */
 
@@ -136,3 +137,4 @@ var GraphsController = function ($scope, dataStore) {
     // }
   });
 };
+})();
