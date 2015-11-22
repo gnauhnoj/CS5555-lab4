@@ -5,7 +5,13 @@
 var IndexController = function($scope) {
 };
 
-var GraphsController = function ($scope) {
+var GraphsController = function ($scope, getData) {
+  // this will change if we actually allow for userdata
+  var uploadedData = {};
+  var data = getData.retrieve(uploadedData, function(data) {
+    console.log(data);
+  });
+
   // boilerplate plottable code
   var xScale = new Plottable.Scales.Time();
   var xAxis = new Plottable.Axes.Numeric(xScale, "bottom");

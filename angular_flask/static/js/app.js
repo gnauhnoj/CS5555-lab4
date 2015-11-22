@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('AngularFlask', ['ngRoute'])
+angular.module('AngularFlask', ['ngRoute', 'angularFlaskServices'])
 	.config([
 		'$routeProvider', '$locationProvider',
 		function($routeProvider, $locationProvider) {

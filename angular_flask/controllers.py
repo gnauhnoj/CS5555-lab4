@@ -28,28 +28,19 @@ def basic_pages(**kwargs):
     return make_response(open('angular_flask/templates/index.html').read())
 
 
-@app.route('/data')
-def get_data():
-    # data is available here
-    out = data['2015-01-08'].activity
-    return json.dumps(out)
-
-
 # routing for CRUD-style endpoints
 # passes routing onto the angular frontend if the requested resource exists
-
 crud_url_models = app.config['CRUD_URL_MODELS']
 
 
-# @app.route('/getdata')
-# def rest_pages():
-#     if model_name in crud_url_models:
-#         model_class = crud_url_models[model_name]
-#         if item_id is None or session.query(exists().where(
-#                 model_class.id == item_id)).scalar():
-#             return make_response(open(
-#                 'angular_flask/templates/index.html').read())
-#     abort(404)
+@app.route('/api/processdata', methods=['POST'])
+def process_data():
+    req = json.loads(request.data)
+    try:
+        out = req['data']
+    except:
+        out = data['2015-01-08'].activity
+    return json.dumps(out)
 
 
 @app.route('/<model_name>/')
