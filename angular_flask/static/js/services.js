@@ -3,6 +3,9 @@ angular.module('angularFlaskServices', ['ngResource'])
     return $resource('/api/graphdata', {}, {
       retrieve: {
         method: 'POST',
+      },
+      get: {
+        method: 'GET'
       }
     });
 });
@@ -13,7 +16,7 @@ angular.module('dataServices', [])
     this.storedData = undefined;
 
     this.retrieveData = function(dataStore, cb) {
-      getGraphData.retrieve(this.uploadData, function(data) {
+      getGraphData.get(this.uploadData, function(data) {
         dataStore.storedData = data;
         cb(data);
       });

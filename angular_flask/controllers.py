@@ -36,15 +36,10 @@ def basic_pages(**kwargs):
 crud_url_models = app.config['CRUD_URL_MODELS']
 
 
-@app.route('/api/graphdata', methods=['POST'])
+@app.route('/api/graphdata', methods=['GET'])
 def graph_data():
-    req = json.loads(request.data)
-    # placeholder before we export stuff
-    try:
-        out = req['data']
-    except:
-        out = {}
-        out['x'], out['y_steps'], out['y_sed_act'], out['y_med_act'] = get_data_over_period(data, serialize_dates=True)
+    out = {}
+    out['x'], out['y_steps'], out['y_sed_act'], out['y_med_act'] = get_data_over_period(data, serialize_dates=True)
     return json.dumps(out)
 
 

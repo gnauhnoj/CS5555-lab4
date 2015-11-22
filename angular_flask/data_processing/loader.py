@@ -46,11 +46,13 @@ def load_json(filename, rows, label):
                 rows[date][label][key] = datum[key]
 
 
-# THIS NEEDS TO CHANGE FOR NEW MONTHLY FILES
-def load_files():
+def load_files(folder_name=None):
+    if not folder_name:
+        folder_name = 'angular_flask/data_processing/data'
+    folder_name += '/{filename}'
     rows = defaultdict(Stats)
     for label, filename in filemap.iteritems():
-        fn = 'angular_flask/data_processing/data/{filename}'.format(filename=filename)
+        fn = folder_name.format(filename=filename)
         load_json(fn, rows, label)
     return rows
 
