@@ -7,10 +7,17 @@ angular.module('AngularFlask', ['ngRoute', 'angularFlaskServices', 'dataServices
 		templateUrl: 'static/partials/landing.html',
 		controller: IndexController
 	})
-	 // Create a "/blog" route that takes the user to the same place as "/post"
 	.when('/graphs', {
 		templateUrl: 'static/partials/graphs.html',
 		controller: GraphsController
+	})
+	.when('/analysis', {
+		templateUrl: 'static/partials/analysis.html',
+		controller: AnalysisController
+	})
+	.when('/recommendations', {
+		templateUrl: 'static/partials/recommendations.html',
+		controller: RecommendationsController
 	})
 	.otherwise({
 		redirectTo: '/'

@@ -4,6 +4,14 @@ var IndexController = function($scope, dataStore) {
   console.log(dataStore.storedData);
 };
 
+var AnalysisController = function($scope, dataStore) {
+  console.log(dataStore.storedData);
+};
+
+var RecommendationsController = function($scope, dataStore) {
+  console.log(dataStore.storedData);
+};
+
 var GraphsController = function ($scope, dataStore) {
   dataStore.retrieveData(dataStore, function(data) {
     // data available in callback -- i need to think about how to do this w/o cb

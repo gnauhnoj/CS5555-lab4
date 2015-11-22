@@ -6,7 +6,6 @@ from flask import render_template, url_for, redirect, send_from_directory
 from flask import send_file, make_response, abort
 from data_processing.analysis import get_data_over_period
 
-
 from angular_flask import app, data
 
 # routing for API endpoints, generated from the models designated as API_MODELS
@@ -26,6 +25,8 @@ session = api_manager.session
 # routing for basic pages (pass routing onto the Angular app)
 @app.route('/')
 @app.route('/graphs')
+@app.route('/analysis')
+@app.route('/recommendations')
 def basic_pages(**kwargs):
     return make_response(open('angular_flask/templates/index.html').read())
 
