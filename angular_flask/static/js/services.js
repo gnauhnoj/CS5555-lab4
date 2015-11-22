@@ -1,6 +1,3 @@
-(function() {
-'use strict';
-
 angular.module('angularFlaskServices', ['ngResource'])
   .factory('getGraphData', function($resource) {
     return $resource('/api/graphdata', {}, {
@@ -22,4 +19,3 @@ angular.module('dataServices', [])
       });
     };
 });
-})();

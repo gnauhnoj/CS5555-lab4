@@ -1,6 +1,3 @@
-(function() {
-'use strict';
-
 angular.module('AngularFlask', ['ngRoute', 'angularFlaskServices', 'dataServices'])
 .config([
 	'$routeProvider', '$locationProvider',
@@ -25,4 +22,3 @@ angular.module('AngularFlask', ['ngRoute', 'angularFlaskServices', 'dataServices
 	});
 }
 ]);
-})();

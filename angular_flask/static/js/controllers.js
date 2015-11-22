@@ -1,6 +1,3 @@
-(function() {
-'use strict';
-
 // /* Controllers */
 
 var IndexController = function($scope, dataStore) {
@@ -137,4 +134,3 @@ var GraphsController = function ($scope, dataStore) {
     // }
   });
 };
-})();
