@@ -44,7 +44,7 @@ def graph_data():
         out = req['data']
     except:
         out = {}
-        out['x'], out['y_steps'], out['y_sed_act'], out['y_med_act'] = y_sed_act = get_data_over_period(data, serialize_dates=True)
+        out['x'], out['y_steps'], out['y_sed_act'], out['y_med_act'] = get_data_over_period(data, serialize_dates=True)
     return json.dumps(out)
 
 
