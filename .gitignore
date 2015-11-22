@@ -1,3 +1,4 @@
+loader.log
 .DS_Store
 *.db
 *.pyc
@@ -6,10 +7,7 @@
 db_repository
 flask
 node_modules
-*.pyc
 venv
-*~
-.DS_Store
 ignore
 
 *.png

@@ -1,11 +1,8 @@
-'use strict';
+// 'use strict';
 
-/* Controllers */
+// /* Controllers */
 
 var IndexController = function($scope) {
-};
-
-var AboutController = function($scope) {
 };
 
 var GraphsController = function ($scope) {

@@ -1,4 +1,13 @@
 'use strict';
 
 // angular.module('angularFlaskServices', ['ngResource'])
-// 	.factory();
+//   .factory('getData', function($resource) {
+//     return $resource('/api/getdata', {}, {
+//       query: {
+//         method: 'POST',
+//         params: {},
+//         isArray: true
+//       }
+//     });
+//   })
+// ;

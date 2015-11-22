@@ -24,8 +24,6 @@ session = api_manager.session
 # routing for basic pages (pass routing onto the Angular app)
 @app.route('/')
 @app.route('/graphs')
-# @app.route('/blog')
-@app.route('/about')
 def basic_pages(**kwargs):
     return make_response(open('angular_flask/templates/index.html').read())
 
@@ -41,6 +39,17 @@ def get_data():
 # passes routing onto the angular frontend if the requested resource exists
 
 crud_url_models = app.config['CRUD_URL_MODELS']
+
+
+# @app.route('/getdata')
+# def rest_pages():
+#     if model_name in crud_url_models:
+#         model_class = crud_url_models[model_name]
+#         if item_id is None or session.query(exists().where(
+#                 model_class.id == item_id)).scalar():
+#             return make_response(open(
+#                 'angular_flask/templates/index.html').read())
+#     abort(404)
 
 
 @app.route('/<model_name>/')
