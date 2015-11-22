@@ -4,6 +4,8 @@ import json
 from flask import Flask, request, Response
 from flask import render_template, url_for, redirect, send_from_directory
 from flask import send_file, make_response, abort
+from data_processing.analysis import get_data_over_period
+
 
 from angular_flask import app, data
 
@@ -33,14 +35,15 @@ def basic_pages(**kwargs):
 crud_url_models = app.config['CRUD_URL_MODELS']
 
 
-@app.route('/api/processdata', methods=['POST'])
-def process_data():
+@app.route('/api/graphdata', methods=['POST'])
+def graph_data():
     req = json.loads(request.data)
+    # placeholder before we export stuff
     try:
         out = req['data']
     except:
-        # out should be data for plots...
-        out = data['2015-01-08'].activity
+        out = {}
+        out['x'], out['y_steps'], out['y_sed_act'], out['y_med_act'] = y_sed_act = get_data_over_period(data, serialize_dates=True)
     return json.dumps(out)
 
 
