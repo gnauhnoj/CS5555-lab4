@@ -19,7 +19,7 @@ def calculate_ci(data, level=0.95):
 
 # sort nparrays according to the provided time stamp
 def sort_time(x, y, y_next=None, y_next_next=None):
-    npa = np.array(zip(x,y))
+    npa = np.array(zip(x, y))
     if y_next is not None:
         npa = np.column_stack([npa, y_next])
         if y_next_next is not None:
