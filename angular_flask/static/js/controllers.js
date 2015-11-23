@@ -1,10 +1,9 @@
 // /* Controllers */
 
 var IndexController = function($scope, dataStore) {
-  console.log(dataStore.storedData);
 };
 
-var AnalysisController = function($scope, dataStore) {
+var AnalysisController = function($scope) {
   $scope.formData = {};
   $scope.formData.dates = [[null, null]];
 
@@ -21,9 +20,9 @@ var AnalysisController = function($scope, dataStore) {
   // write method to send dates for analysis
 };
 
-var RecommendationsController = function($scope, dataStore) {
-  //console.log(dataStore.storedData);
-  dataStore.retrieveData(dataStore, function(data){
+var RecommendationsController = function($scope, getReccData) {
+  getReccData.get(function(data) {
+    console.log(data);
     $scope.last_steps = data.last_steps;
     $scope.last_sed_act = data.last_sed_act;
     $scope.last_med_act = data.last_med_act;
@@ -47,8 +46,8 @@ var reconfigureXAxis = function(xAxis) {
   xAxis.axisConfigurations(newConfigs);
 };
 
-var GraphsController = function ($scope, dataStore) {
-  dataStore.retrieveData(dataStore, function(data) {
+var GraphsController = function ($scope, getGraphData) {
+  getGraphData.get(function(data) {
     var steps = [];
     var medact = [];
     // monthly measures
@@ -65,7 +64,7 @@ var GraphsController = function ($scope, dataStore) {
       medact.push({x: d,
                    y: parseInt(data.y_med_act[i])});
       if (d.getMonth() != cur.getMonth()){
-          if (i != 0){
+          if (i !== 0){
             mo_steps.push({x: cur,
                            y: sum_steps});
             mo_medact.push({x: cur,
@@ -73,12 +72,12 @@ var GraphsController = function ($scope, dataStore) {
           }
           cur = d;
           sum_steps = parseInt(data.y_steps[i]);
-          sum_medact = parseInt(data.y_med_act[i]);  
+          sum_medact = parseInt(data.y_med_act[i]);
       } else {
         sum_steps += parseInt(data.y_steps[i]);
-        sum_medact += parseInt(data.y_med_act[i]); 
+        sum_medact += parseInt(data.y_med_act[i]);
       }
-    } 
+    }
     console.log(mo_steps);
 
     // TODO (Jon): Refactor this bc it is terrible and repeating everything

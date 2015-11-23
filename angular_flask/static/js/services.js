@@ -8,17 +8,24 @@ angular.module('angularFlaskServices', ['ngResource'])
         method: 'GET'
       }
     });
-});
+  })
+  .factory('getReccData', function($resource) {
+    return $resource('/api/reccdata', {}, {
+      get: {
+        method: 'GET'
+      }
+    });
+  });
 
-angular.module('dataServices', [])
-  .service('dataStore', function($rootScope, getGraphData) {
-    this.uploadData = {};
-    this.storedData = undefined;
+// angular.module('dataServices', [])
+//   .service('dataStore', function($rootScope, getGraphData) {
+//     this.uploadData = {};
+//     this.storedData = undefined;
 
-    this.retrieveData = function(dataStore, cb) {
-      getGraphData.get(this.uploadData, function(data) {
-        dataStore.storedData = data;
-        cb(data);
-      });
-    };
-});
+//     this.storeAllData = function(dataStore, cb) {
+//       getGraphData.get(this.uploadData, function(data) {
+//         dataStore.storedData = data;
+//         cb(data);
+//       });
+//     };
+// });

@@ -40,6 +40,12 @@ crud_url_models = app.config['CRUD_URL_MODELS']
 def graph_data():
     out = {}
     out['x'], out['y_steps'], out['y_sed_act'], out['y_med_act'] = get_data_over_period(data, serialize_dates=True)
+    return json.dumps(out)
+
+
+@app.route('/api/reccdata', methods=['GET'])
+def recc_data():
+    out = {}
     out['last_steps'], out['last_sed_act'], out['last_med_act'] = get_last_year_data(data)
     return json.dumps(out)
 

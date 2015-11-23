@@ -1,4 +1,4 @@
-angular.module('AngularFlask', ['ngRoute', 'angularFlaskServices', 'dataServices'])
+angular.module('AngularFlask', ['ngRoute', 'angularFlaskServices'])
 .config([
 	'$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
