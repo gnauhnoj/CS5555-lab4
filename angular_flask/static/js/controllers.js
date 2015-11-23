@@ -42,7 +42,6 @@ var reconfigureXAxis = function(xAxis) {
   xAxis.axisConfigurations(newConfigs);
 };
 
-
 var GraphsController = function ($scope, dataStore) {
   dataStore.retrieveData(dataStore, function(data) {
     var steps = [];
@@ -55,47 +54,81 @@ var GraphsController = function ($scope, dataStore) {
                 y: parseInt(data.y_med_act[i])});
     }
 
+    // TODO (Jon): Refactor this bc it is terrible and repeating everything
     var xScale = new Plottable.Scales.Time();
     var yScale = new Plottable.Scales.Linear();
     var xAxis = new Plottable.Axes.Time(xScale, "bottom");
     reconfigureXAxis(xAxis);
     var yAxis = new Plottable.Axes.Numeric(yScale, "left");
+    var yLabel = new Plottable.Components.AxisLabel( 'steps', '0')
+      .padding( 5 )
+      .xAlignment('right')
+      .yAlignment('top');
 
     var plot = new Plottable.Plots.ClusteredBar('vertical');
-    plot.addDataset(new Plottable.Dataset(steps).metadata(3));
-    plot.x(function(d) { return d.x; }, xScale)
-        .y(function(d) { return d.y; }, yScale);
+    plot.x(function(d) { return d.x; }, xScale).y(function(d) { return d.y; }, yScale);
+    plot.addClass("tooltipped").attr("title", function(d) { return '<div class="bartip"> Steps -- ' + d.y + '</div>';});
+    plot.addDataset(new Plottable.Dataset(steps));
+    plot.addDataset(new Plottable.Dataset([]));
     plot.attr("fill", "#5279C7");
     plot.autorangeMode("y");
     var panZoom = new Plottable.Interactions.PanZoom(xScale, null);
     panZoom.attachTo(plot);
-    var titlelabel = new Plottable.Components.TitleLabel("Steps").yAlignment("center");
-    var table = new Plottable.Components.Table([
-        [null, titlelabel],
-        [yAxis, plot],
-        [null, xAxis]
-    ]);
-    table.renderTo("#barchart");
 
     var xScale2 = new Plottable.Scales.Time();
     var yScale2 = new Plottable.Scales.Linear();
     var xAxis2 = new Plottable.Axes.Time(xScale2, "bottom");
     reconfigureXAxis(xAxis2);
     var yAxis2 = new Plottable.Axes.Numeric(yScale2, "left");
+    var yLabel2 = new Plottable.Components.AxisLabel( 'minutes', '0')
+      .padding( 5 )
+      .xAlignment('left')
+      .yAlignment('top');
 
     var plot2 = new Plottable.Plots.ClusteredBar();
-    plot2.addDataset(new Plottable.Dataset(medact));
     plot2.x(function(d) { return d.x; }, xScale2).y(function(d) { return d.y; }, yScale2);
-    plot.attr("fill", "#BDCEF0");
+    plot2.addClass("tooltipped").attr("title", function(d) { return '<div class="bartip"> Med Activity Minutes -- ' + d.y + '</div>';});
+    plot2.addDataset(new Plottable.Dataset([]));
+    plot2.addDataset(new Plottable.Dataset(medact));
+    plot2.attr("fill", "#BDCEF0");
     plot2.autorangeMode("y");
     var panZoom2 = new Plottable.Interactions.PanZoom(xScale2, null);
     panZoom2.attachTo(plot2);
-    var titlelabel2 = new Plottable.Components.TitleLabel("Moderate Activity Time").yAlignment("center");
-    var table2 = new Plottable.Components.Table([
-        [null, titlelabel2],
-        [yAxis2, plot2],
-        [null, xAxis2]
+
+    var colorScale = new Plottable.Scales.Color();
+    var legend = new Plottable.Components.Legend( colorScale );
+    var names = ['Steps', 'Med Active Minutes'];
+    var colors = ['#5279C7', '#BDCEF0'];
+    colorScale.domain( names );
+    colorScale.range( colors );
+    legend.maxEntriesPerRow( 2 );
+    legend.symbol( Plottable.SymbolFactories.square );
+    legend.xAlignment("right");
+    legend.yAlignment("top");
+
+    var plots = [];
+    plots.push(plot);
+    plots.push(plot2);
+    plots.push(legend);
+    var plotGroup = new Plottable.Components.Group(plots);
+    var yAxisGroup = new Plottable.Components.Group([yAxis, yLabel]);
+    var yAxisGroup2 = new Plottable.Components.Group([yAxis2, yLabel2]);
+    // var titlelabel = new Plottable.Components.TitleLabel("Moderate Activity Time").yAlignment("center");
+    var table = new Plottable.Components.Table([
+        // [null, titlelabel],
+        [yAxisGroup, plotGroup, yAxisGroup2],
+        [null, xAxis2, null]
     ]);
-    table2.renderTo("#barchart2");
+    table.renderTo("#barchart");
+
+    $(".tooltipped rect").qtip({
+      position: {
+        my: "bottom middle",
+        at: "top middle"
+      },
+      style: {
+        classes: "qtip-dark"
+      }
+    });
   });
 };
