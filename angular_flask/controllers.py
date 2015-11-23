@@ -4,7 +4,7 @@ import json
 from flask import Flask, request, Response
 from flask import render_template, url_for, redirect, send_from_directory
 from flask import send_file, make_response, abort
-from data_processing.analysis import get_data_over_period
+from data_processing.analysis import get_data_over_period, get_last_year_data
 
 from angular_flask import app, data
 
@@ -40,6 +40,7 @@ crud_url_models = app.config['CRUD_URL_MODELS']
 def graph_data():
     out = {}
     out['x'], out['y_steps'], out['y_sed_act'], out['y_med_act'] = get_data_over_period(data, serialize_dates=True)
+    out['last_steps'], out['last_sed_act'], out['last_med_act'] = get_last_year_data(data)
     return json.dumps(out)
 
 

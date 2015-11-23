@@ -22,20 +22,47 @@ var AnalysisController = function($scope, dataStore) {
 };
 
 var RecommendationsController = function($scope, dataStore) {
-  console.log(dataStore.storedData);
+  //console.log(dataStore.storedData);
+  dataStore.retrieveData(dataStore, function(data){
+    $scope.last_steps = data.last_steps;
+    $scope.last_sed_act = data.last_sed_act;
+    $scope.last_med_act = data.last_med_act;
+  });
 };
 
 var GraphsController = function ($scope, dataStore) {
   dataStore.retrieveData(dataStore, function(data) {
     var steps = [];
     var medact = [];
-    for (var i=0; i<data.x.length; i += 1){
-      steps.push({x: new Date(data.x[i]),
-               y: parseInt(data.y_steps[i])});
-      medact.push({x: new Date(data.x[i]),
-                y: parseInt(data.y_med_act[i])});
-    }
 
+    var mo = [];
+    var mo_steps = [];
+    var mo_medact = [];
+    var cur_mo = 0;
+    var sum_steps = 0;
+    var sum_medact = 0;
+    for (var i=0; i<data.x.length; i += 1){
+      var d = new Date(data.x[i]);
+      steps.push({x: d,
+                  y: parseInt(data.y_steps[i])});
+      medact.push({x: d,
+                   y: parseInt(data.y_med_act[i])});
+      if (d.getMonth() != cur_mo){
+          if (i != 0){
+            mo_steps.push({x: d,
+                           y: sum_steps});
+            mo_medact.push({x: d,
+                            y: sum_medact});
+          }
+          cur_mo = d.getMonth();
+          sum_steps = parseInt(data.y_steps[i]);
+          sum_medact = parseInt(data.y_med_act[i]);  
+      } else {
+        sum_steps += parseInt(data.y_steps[i]);
+        sum_medact += parseInt(data.y_med_act[i]); 
+      }
+    } 
+    
     var xScale = new Plottable.Scales.Time();
     var yScale = new Plottable.Scales.Linear();
     var xAxis = new Plottable.Axes.Time(xScale, "bottom");
