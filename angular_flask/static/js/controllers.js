@@ -5,9 +5,10 @@ var IndexController = function($scope, dataStore) {
 
 var AnalysisController = function($scope) {
   $scope.formData = {};
+  $scope.formData.categoryLabel = null;
   $scope.formData.dates = [[null, null]];
 
-  // add defaulting code - options - internship, sickness, summer, reset
+  // add defaulting code - options - internship, school year, reset
 
   $scope.addDate = function() {
     $scope.formData.dates.push([null, null]);
@@ -17,6 +18,9 @@ var AnalysisController = function($scope) {
     $scope.formData.dates.splice(this.$index, 1);
   };
 
+  $scope.submit = function() {
+    console.log($scope.formData);
+  };
   // write method to send dates for analysis
 };
 

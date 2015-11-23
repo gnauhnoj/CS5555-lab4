@@ -1,22 +1,32 @@
 <h2>
   Analysis
 </h2>
-<form name="dateForm" novalidate>
-  <label for="dateForm">Pick date ranges for events:</label>
-  <div>
-    <button ng-click="addDate()">Add</button>
-  </div>
-  <div class="form-group" ng-repeat="date in formData.dates" ng-class="{'has-error': dateFieldForm.start.$invalid || dateFieldForm.end.$invalid}">
-    <ng-form name="dateFieldForm">
-      <p class="help-block" ng-show="dateFieldForm.end.$invalid || dateFieldForm.start.$invalid">Valid Start/End Date Required</p>
-      <input type="date" class="form-control" name="start" ng-model="date[0]" placeholder="yyyy-MM-dd" required>
-      <input type="date" class="form-control" name="end" ng-model="date[1]" placeholder="yyyy-MM-dd" min="{{ date[0] }}" required>
-    </ng-form>
+<div>
+  <span>Give us an activity category of activity you're interested in analyzing and some relevant dates:</span>
+  <br> <br>
+  <form name="categoryForm" novalidate>
+      <label>Category</label>
+      <input type="string" name="input" ng-model="formData.categoryLabel">
+  </form>
+
+  <form name="dateForm" novalidate>
+    <label for="dateForm">Pick date ranges for events:</label>
     <div>
-      <button ng-click="deleteDate()">Delete</button>
+      <button ng-click="addDate()">Add</button>
     </div>
-  </div>
-</form>
+    <div class="form-group" ng-repeat="date in formData.dates" ng-class="{'has-error': dateFieldForm.start.$invalid || dateFieldForm.end.$invalid}">
+      <ng-form name="dateFieldForm">
+        <p class="help-block" ng-show="dateFieldForm.end.$invalid || dateFieldForm.start.$invalid">Valid Start/End Date Required</p>
+        <input type="date" class="form-control" name="start" ng-model="date[0]" placeholder="yyyy-MM-dd" required>
+        <input type="date" class="form-control" name="end" ng-model="date[1]" placeholder="yyyy-MM-dd" min="{{ date[0] }}" required>
+      </ng-form>
+      <div>
+        <button ng-click="deleteDate()">Delete</button>
+      </div>
+    </div>
+  </form>
+  <button ng-click="dateForm.$valid && submit()" ng-disabled="!dateForm.$valid">Submit</button>
+</div>
 <div>
   Display output of analysis here
 </div>
