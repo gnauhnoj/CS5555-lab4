@@ -6,7 +6,6 @@ loader.log
 *~
 db_repository
 flask
-node_modules
 venv
 ignore
 
@@ -44,7 +43,6 @@ __pycache__/
 env/
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 lib64/
