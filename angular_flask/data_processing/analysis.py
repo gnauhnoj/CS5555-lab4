@@ -2,7 +2,8 @@ import numpy as np
 import datetime
 import loader
 from scipy import stats
-
+FIRST_DATE = datetime.date(2014,11,01)
+LAST_DATE = datetime.date(2015,11,17)
 
 # calculate confidence interval
 def calculate_ci(data, level=0.95):
@@ -45,9 +46,17 @@ def get_data_over_period(dataset, startdate=None, enddate=None, serialize_dates=
     x, y_steps, y_sed_act, y_med_act = sort_time(x, y_steps, y_sed_act, y_med_act)
     return x.tolist(), y_steps.tolist(), y_sed_act.tolist(), y_med_act.tolist()
 
+def get_overall_data(dataset):
+    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, FIRST_DATE.isoformat(), LAST_DATE.isoformat())
+    return np.mean(y_steps), np.mean(y_sed_act), np.mean(y_med_act)
+
 def get_last_year_data(dataset):
-    now = datetime.date.today()
-    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, str(now.year-1)+'-'+str(now.month)+'-'+'01', str(now.year-1)+'-'+str(now.month)+'-'+'30')
+    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, str(LAST_DATE.year-1)+'-'+str(LAST_DATE.month)+'-'+'01', str(LAST_DATE.year-1)+'-'+str(LAST_DATE.month)+'-'+'30')
+    return sum(y_steps), sum(y_sed_act), sum(y_med_act)
+
+def get_recent_data(dataset):
+    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, LAST_DATE-datetime.timedelta(days=30))
+    x, y_steps, y_sed_act, y_med_act = sort_time(x, y_steps, y_sed_act, y_med_act)
     return sum(y_steps), sum(y_sed_act), sum(y_med_act)
 
 if __name__ == '__main__':

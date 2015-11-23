@@ -26,6 +26,12 @@ var RecommendationsController = function($scope, getReccData) {
     $scope.last_steps = data.last_steps;
     $scope.last_sed_act = data.last_sed_act;
     $scope.last_med_act = data.last_med_act;
+    $scope.recent_steps = data.recent_steps;
+    $scope.recent_sed_act = data.recent_sed_act;
+    $scope.recent_med_act = data.recent_med_act;
+    $scope.overall_steps = data.overall_steps;
+    $scope.overall_sed_act = data.overall_sed_act;
+    $scope.overall_med_act =data.overall_med_act;
   });
 };
 
@@ -48,6 +54,7 @@ var reconfigureXAxis = function(xAxis) {
 
 var GraphsController = function ($scope, getGraphData) {
   getGraphData.get(function(data) {
+    //console.log(data);
     var steps = [];
     var medact = [];
     // monthly measures
@@ -78,7 +85,7 @@ var GraphsController = function ($scope, getGraphData) {
         sum_medact += parseInt(data.y_med_act[i]);
       }
     }
-    console.log(mo_steps);
+
 
     // TODO (Jon): Refactor this bc it is terrible and repeating everything
     var xScale = new Plottable.Scales.Time();

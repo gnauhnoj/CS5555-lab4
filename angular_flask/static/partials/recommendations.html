@@ -2,9 +2,23 @@
   Recommendations
 </div>
 <div>
-	<p>Last year in November</p>
+	<h4>Overall average</h4>
+	<p>{{ overall_steps }} steps</p>
+	<p>Moderate active time: {{ overall_med_act }} mins</p>
+	<p>Sedentary time: {{ overall_sed_act }}</p>
+</div>
+<div>
+	<h4>Last year in November</h4>
 	<p>{{ last_steps }} steps</p>
 	<p>Total mins of moderate act: {{ last_med_act }}</p>
 	<p>Total mins of sed act: {{ last_sed_act }}</p>
 </div>
+<div>
+	<h4>In Past 30 days</h4>
+	<p>{{ recent_steps }} steps</p>
+	<p>Total mins of moderate act: {{ recent_med_act }}</p>
+	<p>Total mins of sed act: {{ recent_sed_act }}</p>
+</div>
+
+
 
