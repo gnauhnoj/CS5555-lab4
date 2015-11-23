@@ -8,17 +8,17 @@ from data_processing.analysis import get_data_over_period, get_last_year_data, g
 from angular_flask import app, data
 
 # routing for API endpoints, generated from the models designated as API_MODELS
-from angular_flask.core import api_manager
+# from angular_flask.core import api_manager
 from angular_flask.models import *
 
-from sqlalchemy.sql import exists
+# from sqlalchemy.sql import exists
 
 
-for model_name in app.config['API_MODELS']:
-    model_class = app.config['API_MODELS'][model_name]
-    api_manager.create_api(model_class, methods=['GET', 'POST'])
+# for model_name in app.config['API_MODELS']:
+#     model_class = app.config['API_MODELS'][model_name]
+#     api_manager.create_api(model_class, methods=['GET', 'POST'])
 
-session = api_manager.session
+# session = api_manager.session
 
 
 # routing for basic pages (pass routing onto the Angular app)
@@ -33,6 +33,14 @@ def basic_pages(**kwargs):
 # routing for CRUD-style endpoints
 # passes routing onto the angular frontend if the requested resource exists
 crud_url_models = app.config['CRUD_URL_MODELS']
+
+
+@app.route('/api/analysisdata', methods=['GET'])
+def analysis_data():
+    out = {}
+    out['overall_steps'], out['overall_sed_act'], out['overall_med_act'] = get_overall_data(data)
+
+    return json.dumps(out)
 
 
 @app.route('/api/graphdata', methods=['GET'])
@@ -51,16 +59,16 @@ def recc_data():
     return json.dumps(out)
 
 
-@app.route('/<model_name>/')
-@app.route('/<model_name>/<item_id>')
-def rest_pages(model_name, item_id=None):
-    if model_name in crud_url_models:
-        model_class = crud_url_models[model_name]
-        if item_id is None or session.query(exists().where(
-                model_class.id == item_id)).scalar():
-            return make_response(open(
-                'angular_flask/templates/index.html').read())
-    abort(404)
+# @app.route('/<model_name>/')
+# @app.route('/<model_name>/<item_id>')
+# def rest_pages(model_name, item_id=None):
+#     if model_name in crud_url_models:
+#         model_class = crud_url_models[model_name]
+#         if item_id is None or session.query(exists().where(
+#                 model_class.id == item_id)).scalar():
+#             return make_response(open(
+#                 'angular_flask/templates/index.html').read())
+#     abort(404)
 
 
 # special file handlers and error handlers
