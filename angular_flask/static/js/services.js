@@ -15,6 +15,13 @@ angular.module('angularFlaskServices', ['ngResource'])
         method: 'GET'
       }
     });
+  })
+  .factory('analysisdata', function($resource) {
+    return $resource('/api/analysisdata', {}, {
+      retrieve: {
+        method: 'POST'
+      }
+    });
   });
 
 // angular.module('dataServices', [])
