@@ -1,12 +1,25 @@
 <div>
   Recommendations
 </div>
+
+<p>Steps</p> 
+<div class="progress">
+	<div id="steps" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+<p>Moderate Activities</p>
+<div class="progress">
+	<div id="medact" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
 <div>
 	<h4>Overall average</h4>
 	<p>{{ overall_steps }} steps</p>
 	<p>Moderate active time: {{ overall_med_act }} mins</p>
 	<p>Sedentary time: {{ overall_sed_act }}</p>
 </div>
+	
+
 <div>
 	<h4>Last year in November</h4>
 	<p>{{ last_steps }} steps</p>

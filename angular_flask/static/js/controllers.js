@@ -57,7 +57,15 @@ var RecommendationsController = function($scope, getReccData) {
     $scope.overall_steps = data.overall_steps;
     $scope.overall_sed_act = data.overall_sed_act;
     $scope.overall_med_act =data.overall_med_act;
+    $scope.mo_steps = data.mo_steps;
+    $scope.mo_sed_act = data.mo_sed_act;
+    $scope.mo_med_act = data.mo_med_act;
+    var steps_pct = parseFloat(data.mo_steps)/(parseFloat(data.last_steps)) *100;
+    var med_act_pct = parseFloat(data.mo_med_act)/(parseFloat(data.last_med)) * 100;
+    $('#steps').css('width', steps_pct+'%').attr('aria-valuenow', steps_pct);
+    $('#medact').css('width', steps_pct+'%').attr('aria-valuenow', med_act_pct);
   });
+
 };
 
 var reconfigureXAxis = function(xAxis) {
