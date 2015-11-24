@@ -1,12 +1,24 @@
 // /* Controllers */
 
-var IndexController = function($scope, dataStore) {
+var IndexController = function($scope) {
 };
 
-var AnalysisController = function($scope) {
+var dateIfy = function(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr[i].length; j++) {
+      var newd = new Date(arr[i][j].replace( /(\d{4})-(\d{2})-(\d{2})/, "$2/$3/$1"));
+      arr[i][j] = newd;
+    }
+  }
+  return arr;
+};
+
+var AnalysisController = function($scope, getAnalysisData) {
   $scope.formData = {};
   $scope.formData.categoryLabel = null;
   $scope.formData.dates = [[null, null]];
+
+  $scope.analysis = {};
 
   // add defaulting code - options - internship, school year, reset
 
@@ -19,9 +31,18 @@ var AnalysisController = function($scope) {
   };
 
   $scope.submit = function() {
-    console.log($scope.formData);
+    getAnalysisData.retrieve($scope.formData, function(res) {
+      $scope.analysis = res;
+    });
   };
-  // write method to send dates for analysis
+
+  $scope.preset_school = function() {
+    $scope.formData.dates = dateIfy([['2014-08-26', '2014-12-12'], ['2015-01-21', '2015-05-06'], ['2015-08-25', '2015-12-04']]);
+  };
+
+  $scope.preset_internship = function() {
+    $scope.formData.dates = dateIfy([['2015-05-26', '2015-08-14']]);
+  };
 };
 
 var RecommendationsController = function($scope, getReccData) {

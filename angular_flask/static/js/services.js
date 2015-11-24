@@ -16,7 +16,7 @@ angular.module('angularFlaskServices', ['ngResource'])
       }
     });
   })
-  .factory('analysisdata', function($resource) {
+  .factory('getAnalysisData', function($resource) {
     return $resource('/api/analysisdata', {}, {
       retrieve: {
         method: 'POST'

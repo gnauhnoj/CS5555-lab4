@@ -49,6 +49,54 @@ def get_data_over_period(dataset, startdate=None, enddate=None, serialize_dates=
     return x.tolist(), y_steps.tolist(), y_sed_act.tolist(), y_med_act.tolist()
 
 
+def test_point_ci(tuple, value):
+    if value < tuple[0]:
+        return -1
+    elif value > tuple[1]:
+        return 1
+    else:
+        return 0
+
+
+def handle_analysis_request(dataset, date_list):
+    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, FIRST_DATE.isoformat(), LAST_DATE.isoformat())
+    total_sy_steps = []
+    total_sy_sed_act = []
+    total_sy_med_act = []
+    for interval in date_list:
+        sx, sy_steps, sy_sed_act, sy_med_act = get_data_over_period(dataset, interval[0], interval[1])
+        total_sy_steps += sy_steps
+        total_sy_sed_act += sy_sed_act
+        total_sy_med_act += sy_med_act
+
+    # print "Year STD:", np.std(y_steps), np.std(y_sed_act), np.std(y_med_act)
+    mean_sy_steps = np.mean(total_sy_steps)
+    mean_sy_sed_act = np.mean(total_sy_sed_act)
+    mean_sy_med_act = np.average(total_sy_med_act)
+
+    ci_steps = calculate_ci(y_steps)
+    ci_sed_act = calculate_ci(y_sed_act)
+    ci_med_act = calculate_ci(y_med_act)
+
+    out = {}
+    out['mean'] = {
+        'steps': mean_sy_steps,
+        'sed_act': mean_sy_sed_act,
+        'med_act': mean_sy_med_act
+    }
+    out['diff'] = {
+        'steps': mean_sy_steps - np.mean(y_steps),
+        'sed_act': mean_sy_sed_act - np.mean(y_sed_act),
+        'med_act': mean_sy_med_act - np.mean(y_med_act)
+    }
+    out['ci_test'] = {
+        'steps': test_point_ci(ci_steps, mean_sy_steps),
+        'sed_act': test_point_ci(ci_sed_act, mean_sy_sed_act),
+        'med_act': test_point_ci(ci_med_act, mean_sy_med_act)
+    }
+    return out
+
+
 def get_overall_data(dataset):
     x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, FIRST_DATE.isoformat(), LAST_DATE.isoformat())
     return np.mean(y_steps), np.mean(y_sed_act), np.mean(y_med_act)
@@ -72,7 +120,7 @@ if __name__ == '__main__':
     x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset)
     # sx, sy_steps, sy_sed_act, sy_med_act = get_data_over_period(dataset, "2015-06-01", "2015-08-30")
     get_last_year_data(dataset)
-    # print "Year:", np.mean(y_steps), np.mean(y_sed_act)
+    print "Year:", np.mean(y_steps), np.mean(y_sed_act)
     # print "Year std:", np.std(y_steps), np.std(y_sed_act)
     # print "Year CI:", calculate_ci(y_steps), calculate_ci(y_sed_act)
     # print "Period", np.average(sy_steps), np.average(sy_sed_act)

@@ -4,7 +4,7 @@ import json
 from flask import Flask, request, Response
 from flask import render_template, url_for, redirect, send_from_directory
 from flask import send_file, make_response, abort
-from data_processing.analysis import get_data_over_period, get_last_year_data, get_recent_data, get_overall_data
+from data_processing.analysis import get_data_over_period, get_last_year_data, get_recent_data, get_overall_data, handle_analysis_request
 from angular_flask import app, data
 
 # routing for API endpoints, generated from the models designated as API_MODELS
@@ -35,11 +35,11 @@ def basic_pages(**kwargs):
 crud_url_models = app.config['CRUD_URL_MODELS']
 
 
-@app.route('/api/analysisdata', methods=['GET'])
+@app.route('/api/analysisdata', methods=['POST'])
 def analysis_data():
-    out = {}
-    out['overall_steps'], out['overall_sed_act'], out['overall_med_act'] = get_overall_data(data)
-
+    req = json.loads(request.data)
+    date_intervals = [[datestr.split('T')[0] for datestr in dates] for dates in req['dates']]
+    out = handle_analysis_request(data, date_intervals)
     return json.dumps(out)
 
 

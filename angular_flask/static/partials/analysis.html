@@ -27,6 +27,22 @@
   </form>
   <button ng-click="dateForm.$valid && submit()" ng-disabled="!dateForm.$valid">Submit</button>
 </div>
+<!-- Add preset options -->
 <div>
-  Display output of analysis here
+<div ng-click="preset_school()">School</div>
+<div ng-click="preset_internship()">Intern Season</div>
+</div>
+<!-- Add ng-shows at some point -->
+<div>
+  Mean Steps: {{ analysis.mean.steps }}
+  Difference: {{ analysis.diff.steps }}
+  CI: {{ analysis.ci_test.steps }}
+  <br>
+  Mean Sedentary Time: {{ analysis.mean.sed_act }}
+  Difference: {{ analysis.diff.sed_act }}
+  CI: {{ analysis.ci_test.sed_act }}
+  <br>
+  Mean Moderate Time: {{ analysis.mean.med_act }}
+  Difference: {{ analysis.diff.med_act }}
+  CI: {{ analysis.ci_test.med_act }}
 </div>
