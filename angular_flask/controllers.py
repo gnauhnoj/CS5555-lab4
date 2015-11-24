@@ -4,7 +4,7 @@ import json
 from flask import Flask, request, Response
 from flask import render_template, url_for, redirect, send_from_directory
 from flask import send_file, make_response, abort
-from data_processing.analysis import get_data_over_period, get_last_year_data, get_recent_data, get_overall_data
+from data_processing.analysis import get_data_over_period, get_last_year_data, get_recent_data, get_overall_data, get_mo_data
 from angular_flask import app, data
 
 # routing for API endpoints, generated from the models designated as API_MODELS
@@ -48,6 +48,7 @@ def recc_data():
     out['overall_steps'], out['overall_sed_act'], out['overall_med_act'] = get_overall_data(data)
     out['last_steps'], out['last_sed_act'], out['last_med_act'] = get_last_year_data(data)
     out['recent_steps'], out['recent_sed_act'], out['recent_med_act'] = get_recent_data(data)
+    out['mo_steps'], out['mo_sed_act'], out['mo_med_act'] = get_mo_data(data)
     return json.dumps(out)
 
 

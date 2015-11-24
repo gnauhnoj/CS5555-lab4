@@ -55,8 +55,12 @@ def get_last_year_data(dataset):
     return sum(y_steps), sum(y_sed_act), sum(y_med_act)
 
 def get_recent_data(dataset):
-    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, LAST_DATE-datetime.timedelta(days=30))
+    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, (LAST_DATE-datetime.timedelta(days=30)).isoformat(), LAST_DATE.isoformat())
     x, y_steps, y_sed_act, y_med_act = sort_time(x, y_steps, y_sed_act, y_med_act)
+    return np.mean(y_steps), np.mean(y_sed_act), np.mean(y_med_act)
+
+def get_mo_data(dataset):
+    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, str(LAST_DATE.year)+'-'+str(LAST_DATE.month)+'-01', LAST_DATE.isoformat())
     return sum(y_steps), sum(y_sed_act), sum(y_med_act)
 
 if __name__ == '__main__':
