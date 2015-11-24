@@ -4,7 +4,7 @@ import json
 from flask import Flask, request, Response
 from flask import render_template, url_for, redirect, send_from_directory
 from flask import send_file, make_response, abort
-from data_processing.analysis import handle_analysis_request, handle_recc_request
+from data_processing.analysis import get_data_over_period, handle_analysis_request, handle_recc_request
 from angular_flask import app, data
 
 # routing for API endpoints, generated from the models designated as API_MODELS
