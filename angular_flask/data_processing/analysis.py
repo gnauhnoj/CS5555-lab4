@@ -107,14 +107,53 @@ def get_last_year_data(dataset):
     return sum(y_steps), sum(y_sed_act), sum(y_med_act)
 
 
-def get_recent_data(dataset):
-    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, (LAST_DATE-datetime.timedelta(days=30)).isoformat(), LAST_DATE.isoformat())
+def get_recent_data(dataset, timedelta=30):
+    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, (LAST_DATE-datetime.timedelta(days=timedelta)).isoformat(), LAST_DATE.isoformat())
     x, y_steps, y_sed_act, y_med_act = sort_time(x, y_steps, y_sed_act, y_med_act)
     return np.mean(y_steps), np.mean(y_sed_act), np.mean(y_med_act)
 
 def get_mo_data(dataset):
     x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, str(LAST_DATE.year)+'-'+str(LAST_DATE.month)+'-01', LAST_DATE.isoformat())
     return sum(y_steps), sum(y_sed_act), sum(y_med_act)
+
+def handle_recc_request(dataset):
+    overall_steps, overall_sed_act, overall_med_act = get_overall_data(dataset)
+    out = {}
+    out['mo'] = LAST_DATE.strftime("%B")
+    out['lifetime'] = {
+        'steps': overall_steps,
+        'sed_act': overall_sed_act,
+        'med_act': overall_med_act
+    }
+    x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, FIRST_DATE.isoformat(), LAST_DATE.isoformat())
+    steps_ci= calculate_ci(y_steps)
+    sed_act_ci = calculate_ci(y_sed_act)
+    med_act_ci = calculate_ci(y_med_act)
+    recent_steps, recent_sed_act, recent_med_act = get_recent_data(dataset)
+    out['recent'] = {
+        'steps': recent_steps,
+        'sed_act': recent_sed_act,
+        'med_act': recent_med_act,
+        'steps_ci': test_point_ci(steps_ci, recent_steps),
+        'sed_act_ci': test_point_ci(sed_act_ci, recent_sed_act),
+        'med_act_ci': test_point_ci(med_act_ci, recent_med_act)
+    }
+    mo_steps, mo_sed_act, mo_med_act = get_mo_data(dataset)
+    out['month'] = {
+        'steps': mo_steps,
+        'sed_act': mo_sed_act,
+        'med_act': mo_med_act
+    }
+    lm_steps, lm_sed_act, lm_med_act = get_last_year_data(dataset)
+    out['last'] = {
+        'steps': lm_steps,
+        'sed_act': lm_sed_act,
+        'med_act': lm_med_act,
+        'steps_ci': test_point_ci(steps_ci, float(lm_steps)/30),
+        'sed_act_ci': test_point_ci(sed_act_ci, float(lm_sed_act)/30),
+        'med_act_ci': test_point_ci(med_act_ci, float(lm_med_act)/30)
+    }
+    return out
 
 
 if __name__ == '__main__':
