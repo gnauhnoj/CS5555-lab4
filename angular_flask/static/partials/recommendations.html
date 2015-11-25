@@ -1,6 +1,7 @@
 <div>
   Recommendations
 </div>
+<<<<<<< HEAD
 <div class="row">
 	<div class="col-md-6" align="center">
 		<h4>Steps</h4>
@@ -12,6 +13,17 @@
 		<p>Goal: {{ recc.last.med_act }}</p>
 			<div id="medact" data-dimension="250" data-info="Minutes" data-width="30" data-fontsize="38" data-fgcolor="#61dc7c" data-bgcolor="#eee" data-fill="#fff" data-icon="long-arrow-up" data-icon-size="28" data-icon-color="#fff"></div>
 	</div>
+=======
+
+<p>Steps</p>
+<div class="progress">
+	<div id="steps" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+<p>Moderate Activities</p>
+<div class="progress">
+	<div id="medact" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+>>>>>>> 26ad8ebc538258680ecb83a1c7f55fad6827f8b0
 </div>
 <div>
 	<h4>In recent 30 days</h4>
@@ -22,6 +34,7 @@
 	<p>moderate act time ci: {{ recc.recent.med_act_ci }}</p>
 	<p>sed act time ci: {{recc.recent.sed_act_ci}}</p>
 </div>
+
 <div>
 	<h4>Lifetime average</h4>
 	<p>{{ recc.lifetime.steps }} steps</p>

@@ -18,8 +18,8 @@ dataloader = {
   'username': 'gnauhnoj',
   'shim': 'fitbit',
   # change start/end to pull different data periods
-  'start': '2014-11-01',
-  'end': '2015-01-01',
+  'start': '2015-11-01',
+  # 'end': '2015-01-01',
   'normalize': 'false',
   'endpoints': ['activity']
 }

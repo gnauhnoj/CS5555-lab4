@@ -1,6 +1,7 @@
 import numpy as np
 import datetime
 import loader
+from math import floor
 from scipy import stats
 FIRST_DATE = datetime.date(2014, 11, 01)
 LAST_DATE = datetime.date(2015, 11, 17)
@@ -80,14 +81,14 @@ def handle_analysis_request(dataset, date_list):
 
     out = {}
     out['mean'] = {
-        'steps': mean_sy_steps,
-        'sed_act': mean_sy_sed_act,
-        'med_act': mean_sy_med_act
+        'steps': floor(mean_sy_steps),
+        'sed_act': floor(mean_sy_sed_act),
+        'med_act': floor(mean_sy_med_act)
     }
     out['diff'] = {
-        'steps': mean_sy_steps - np.mean(y_steps),
-        'sed_act': mean_sy_sed_act - np.mean(y_sed_act),
-        'med_act': mean_sy_med_act - np.mean(y_med_act)
+        'steps': floor(mean_sy_steps - np.mean(y_steps)),
+        'sed_act': floor(mean_sy_sed_act - np.mean(y_sed_act)),
+        'med_act': floor(mean_sy_med_act - np.mean(y_med_act))
     }
     out['ci_test'] = {
         'steps': test_point_ci(ci_steps, mean_sy_steps),
@@ -112,9 +113,11 @@ def get_recent_data(dataset, timedelta=30):
     x, y_steps, y_sed_act, y_med_act = sort_time(x, y_steps, y_sed_act, y_med_act)
     return np.mean(y_steps), np.mean(y_sed_act), np.mean(y_med_act)
 
+
 def get_mo_data(dataset):
     x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, str(LAST_DATE.year)+'-'+str(LAST_DATE.month)+'-01', LAST_DATE.isoformat())
     return sum(y_steps), sum(y_sed_act), sum(y_med_act)
+
 
 def handle_recc_request(dataset):
     overall_steps, overall_sed_act, overall_med_act = get_overall_data(dataset)
@@ -126,7 +129,7 @@ def handle_recc_request(dataset):
         'med_act': overall_med_act
     }
     x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, FIRST_DATE.isoformat(), LAST_DATE.isoformat())
-    steps_ci= calculate_ci(y_steps)
+    steps_ci = calculate_ci(y_steps)
     sed_act_ci = calculate_ci(y_sed_act)
     med_act_ci = calculate_ci(y_med_act)
     recent_steps, recent_sed_act, recent_med_act = get_recent_data(dataset)
