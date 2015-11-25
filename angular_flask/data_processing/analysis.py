@@ -138,9 +138,9 @@ def handle_recc_request(dataset):
     med_act_ci = calculate_ci(y_med_act)
     recent_steps, recent_sed_act, recent_med_act = get_recent_data(dataset)
     out['recent'] = {
-        'steps': round(recent_steps, 2),
-        'sed_act': round(recent_sed_act, 2),
-        'med_act': round(recent_med_act, 2),
+        'steps': round(recent_steps, 0),
+        'sed_act': round(recent_sed_act, 0),
+        'med_act': round(recent_med_act, 0),
         'steps_ci': test_point_ci(steps_ci, recent_steps),
         'sed_act_ci': test_point_ci(sed_act_ci, recent_sed_act),
         'med_act_ci': test_point_ci(med_act_ci, recent_med_act)

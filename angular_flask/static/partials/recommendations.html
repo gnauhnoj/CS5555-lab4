@@ -1,75 +1,60 @@
-<div class="row">
-	<div class="col-md-1">
-	</div>
-	<div class="col-md-3">
-		<div class="panel panel-default" align="center">
-    		<div class="panel-body">
-    			<div id="recent-steps"></div>
-    			<h2>{{ recc.recent.steps }}</h2>
-    			<p>Steps</p>
-    		</div>
-    		<div class="panel-footer">Average Daily Steps</div>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="panel panel-default" align="center">
-			<div class="panel-body">
-				<div id="recent-med-act"></div>
-				<h2>{{ recc.recent.med_act }}</h2>
-				<p>Mins</p>
+<div class="container marketing">
+	<h2 class="text-muted" align="center"> Average daily statistics in recent 30 days</h2>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-2">
+			<div class="panel panel-default" align="center">
+	    		<div class="panel-body">
+	    			<h3 class="glyphicon glyphicon-arrow-up" ng-if="recc.recent.steps_ci == 1" style="color: green"></h3>
+	    			<h3 class="glyphicon glyphicon-arrow-down" ng-if="recc.recent.steps_ci == -1" style="color: red"></h3>
+	    			<h2 style="font-weight: bold">{{ recc.recent.steps }}</h2>
+	    			<span class="text-muted">Steps</span>
+	    		</div>
 			</div>
-			<div class="panel-footer">Average Moderate Active Time</div>
 		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="panel panel-default" align="center">
-			<div class="panel-body">
-				<div id="recent-sed-act"></div>
-				<h2>{{ recc.recent.sed_act }}</h2>
-				<p>Mins</p>
+		<div class="col-md-2">
+			<div class="panel panel-default" align="center">
+				<div class="panel-body">
+	    			<h3 class="glyphicon glyphicon-arrow-up" ng-if="recc.recent.med_act_ci == 1" style="color: green"></h3>
+	    			<h3 class="glyphicon glyphicon-arrow-down" ng-if="recc.recent.med_act_ci == -1" style="color: red"></h3>
+					<h2 style="font-weight: bold">{{ recc.recent.med_act }}</h2>
+					<span class="text-muted">Active Minutes</span>
+				</div>
 			</div>
-			<div class="panel-footer">Average Sedentary Time</div>
 		</div>
+		<div class="col-md-2">
+			<div class="panel panel-default" align="center">
+				<div class="panel-body">
+	    			<h3 class="glyphicon glyphicon-arrow-up" ng-if="recc.recent.sed_act_ci == 1" style="color: green"></h3>
+	    			<h3 class="glyphicon glyphicon-arrow-down" ng-if="recc.recent.sed_act_ci == -1" style="color: red"></h3>
+					<h2 style="font-weight: bold">{{ recc.recent.sed_act }}</h2>
+					<span class="text-muted">Inactive Minutes</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3"></div>
 	</div>
-	<div class="col-md-1">
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-2"></div>
-	<div class="col-md-4">
-		<h4>Steps</h4>
-		<p>Goal: {{ recc.last.steps }}</p>
-		<div id="steps" data-dimension="250" data-info="Steps" data-width="30" data-fontsize="38" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#fff" data-icon="long-arrow-up" data-icon-size="28" data-icon-color="#fff"></div>
-	</div>
-	<div class="col-md-4">
-		<h4>Moderate Activities</h4>
-		<p>Goal: {{ recc.last.med_act }}</p>
-		<div id="medact" data-dimension="250" data-info="Minutes" data-width="30" data-fontsize="38" data-fgcolor="#61dc7c" data-bgcolor="#eee" data-fill="#fff" data-icon="long-arrow-up" data-icon-size="28" data-icon-color="#fff"></div>
-	</div>
-	<div class="col-md-2"></div>
-</div>
-<div>
-	<h4>In recent 30 days</h4>
-	<p>{{ recc.recent.steps }} steps</p>
-	<p>Average moderate act time: {{ recc.recent.med_act }} mins</p>
-	<p>Average sed act time: {{ recc.recent.sed_act }} mins</p>
-	<p>steps ci: {{ recc.recent.steps_ci }}</p>
-	<p>moderate act time ci: {{ recc.recent.med_act_ci }}</p>
-	<p>sed act time ci: {{recc.recent.sed_act_ci}}</p>
 </div>
 
-<div>
-	<h4>Lifetime average</h4>
-	<p>{{ recc.lifetime.steps }} steps</p>
-	<p>Moderate active time: {{ recc.lifetime.med_act }} mins</p>
-	<p>Sedentary time: {{ recc.lifetime.sed_act }} mins</p>
-</div>
-
-<div>
-	<h4>Last year in {{ recc.mo }}</h4>
-	<p>Steps CI: {{ recc.last.steps_ci }}</p>
-	<p>Moderate act time CI: {{ recc.last.med_act_ci }}</p>
-	<p>Sed act time CI: {{ recc.last.sed_act_ci }}</p>
+<hr class="featurette-divider">
+<div class="featurette">
+	<div class="row">
+		<div class="col-md-6">
+			<h3 class="text-muted">Last year in <span style="font-weight: bold">{{recc.mo}}</span>,<h3>
+			<h3 class="text-muted" ng-if="recc.last.steps_ci == -1 || recc.last.med_act_ci == -1">you were less active than usual. Try to improve this year.</h3>
+			<h3 class="text-muted" ng-if="recc.last.steps_ci == 1 || recc.last_med_act_ci == 1">you were active. Keep doing it this year.</h3>
+		</div>
+		<div class="col-md-3">
+			<h4>Steps</h4>
+			<p>Last {{recc.mo}}: {{ recc.last.steps }} steps</p>
+			<div id="steps" data-dimension="250" data-info="Steps" data-width="30" data-fontsize="38" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#fff" data-icon="long-arrow-up" data-icon-size="28" data-icon-color="#fff"></div>
+		</div>
+		<div class="col-md-3">
+			<h4>Moderate Activities</h4>
+			<p>Last {{recc.mo}}: {{ recc.last.med_act }} minutes</p>
+			<div id="medact" data-dimension="250" data-info="Minutes" data-width="30" data-fontsize="38" data-fgcolor="#61dc7c" data-bgcolor="#eee" data-fill="#fff" data-icon="long-arrow-up" data-icon-size="28" data-icon-color="#fff"></div>
+		</div>
+	</div>
 </div>
 
 

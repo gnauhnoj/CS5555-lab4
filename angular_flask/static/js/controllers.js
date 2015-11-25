@@ -54,28 +54,12 @@ var RecommendationsController = function($scope, getReccData) {
     var steps_pct = parseFloat(data.month.steps)/(parseFloat(data.last.steps)) *100;
     var med_act_pct = parseFloat(data.month.med_act)/(parseFloat(data.last.med_act)) * 100;
     $('#steps').attr('data-percent', steps_pct);
-    $('#steps').attr('data-text', Math.round(data.month.steps, 1));
+    $('#steps').attr('data-text', Math.round(data.month.steps, 0));
     $('#steps').circliful();
 
     $('#medact').attr('data-percent', med_act_pct);
-    $('#medact').attr('data-text', Math.round(data.month.med_act, 1));
+    $('#medact').attr('data-text', Math.round(data.month.med_act, 0));
     $('#medact').circliful();
-
-    if (data.recent.steps_ci === 1){
-      $('#recent-steps').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>');
-    }else if (data.recent.steps_ci === -1){
-      $('#recent-steps').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>');
-    }
-    if (data.recent.med_act_ci === 1){
-      $('#recent-med-act').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>');
-    }else if (data.recent.med_act_ci === -1){
-      $('#recent-med-act').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>');
-    }
-    if (data.recent.sed_act_ci === 1){
-      $('#recent-sed-act').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>');
-    }else if (data.recent.sed_act_ci === -1){
-      $('#recent-sed-act').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>');
-    }
   });
 };
 
