@@ -59,9 +59,9 @@ var RecommendationsController = function($scope, getReccData) {
     $('#medact').attr('data-text', Math.round(data.month.med_act, 1));
     $('#medact').circliful();
 
-
-    //$('#steps').css('width', steps_pct+'%').attr('aria-valuenow', steps_pct);
-    //$('#medact').css('width', med_act_pct+'%').attr('aria-valuenow', med_act_pct);
+    if (data.recent.steps_ci === 1){
+      $('.up-down').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>')
+    }
   });
 };
 
