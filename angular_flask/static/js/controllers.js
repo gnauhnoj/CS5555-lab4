@@ -60,7 +60,19 @@ var RecommendationsController = function($scope, getReccData) {
     $('#medact').circliful();
 
     if (data.recent.steps_ci === 1){
-      $('.up-down').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>')
+      $('#recent-steps').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>')
+    }else if (data.recent.steps_ci === -1){
+      $('#recent-steps').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>')
+    }
+    if (data.recent.med_act_ci === 1){
+      $('#recent-med-act').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>')
+    }else if (data.recent.med_act_ci === -1){
+      $('#recent-med-act').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>')
+    }
+    if (data.recent.sed_act_ci === 1){
+      $('#recent-sed-act').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>')
+    }else if (data.recent.sed_act_ci === -1){
+      $('#recent-sed-act').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>')
     }
   });
 };

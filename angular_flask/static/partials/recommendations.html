@@ -4,7 +4,7 @@
 	<div class="col-md-3">
 		<div class="panel panel-default" align="center">
     		<div class="panel-body">
-    			<div class="up-down"></div>
+    			<div id="recent-steps"></div>
     			<h2>{{ recc.recent.steps }}</h2>
     			<p>Steps</p>
     		</div>
@@ -14,6 +14,7 @@
 	<div class="col-md-3">
 		<div class="panel panel-default" align="center">
 			<div class="panel-body">
+				<div id="recent-med-act"></div>
 				<h2>{{ recc.recent.med_act }}</h2>
 				<p>Mins</p>
 			</div>
@@ -23,7 +24,7 @@
 	<div class="col-md-3">
 		<div class="panel panel-default" align="center">
 			<div class="panel-body">
-				<div class
+				<div id="recent-sed-act"></div>
 				<h2>{{ recc.recent.sed_act }}</h2>
 				<p>Mins</p>
 			</div>
@@ -34,8 +35,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-md-4">
-	</div>
+	<div class="col-md-2"></div>
 	<div class="col-md-4">
 		<h4>Steps</h4>
 		<p>Goal: {{ recc.last.steps }}</p>
@@ -46,6 +46,7 @@
 		<p>Goal: {{ recc.last.med_act }}</p>
 		<div id="medact" data-dimension="250" data-info="Minutes" data-width="30" data-fontsize="38" data-fgcolor="#61dc7c" data-bgcolor="#eee" data-fill="#fff" data-icon="long-arrow-up" data-icon-size="28" data-icon-color="#fff"></div>
 	</div>
+	<div class="col-md-2"></div>
 </div>
 <div>
 	<h4>In recent 30 days</h4>
