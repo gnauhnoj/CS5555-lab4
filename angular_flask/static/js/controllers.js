@@ -13,7 +13,8 @@ var dateIfy = function(arr) {
   return arr;
 };
 
-var AnalysisController = function($scope, getAnalysisData) {
+var AnalysisController = function($scope, getAnalysisData, $location, $anchorScroll) {
+  $scope.processed = false;
   $scope.formData = {};
   $scope.formData.categoryLabel = null;
   $scope.formData.dates = [[null, null]];
@@ -33,6 +34,12 @@ var AnalysisController = function($scope, getAnalysisData) {
   $scope.submit = function() {
     getAnalysisData.retrieve($scope.formData, function(res) {
       $scope.analysis = res;
+      $scope.processed = true;
+
+      // $location.hash('go-here');
+      // $anchorScroll();
+
+      window.location='#go-here';
     });
   };
 
@@ -185,9 +192,9 @@ var GraphsController = function ($scope, getGraphData) {
     var plotGroup = new Plottable.Components.Group(plots);
     var yAxisGroup = new Plottable.Components.Group([yAxis, yLabel]);
     var yAxisGroup2 = new Plottable.Components.Group([yAxis2, yLabel2]);
-    var titlelabel = new Plottable.Components.TitleLabel("Daily Activity").yAlignment("center");
+    // var titlelabel = new Plottable.Components.TitleLabel("Daily Activity").yAlignment("center");
     var table = new Plottable.Components.Table([
-        [null, titlelabel],
+        // [null, titlelabel],
         [yAxisGroup, plotGroup, yAxisGroup2],
         [null, xAxis2, null]
     ]);
@@ -243,9 +250,9 @@ var GraphsController = function ($scope, getGraphData) {
     var plotGroup_mo = new Plottable.Components.Group(plots_mo);
     var yAxisGroup_mo = new Plottable.Components.Group([yAxis_mo, yLabel_mo]);
     var yAxisGroup2_mo = new Plottable.Components.Group([yAxis2_mo, yLabel2_mo]);
-    var titlelabel_mo = new Plottable.Components.TitleLabel("Average Monthly Activity").yAlignment("center");
+    // var titlelabel_mo = new Plottable.Components.TitleLabel("Average Monthly Activity").yAlignment("center");
     var table_mo = new Plottable.Components.Table([
-        [null, titlelabel_mo],
+        // [null, titlelabel_mo],
         [yAxisGroup_mo, plotGroup_mo, yAxisGroup2_mo],
         [null, xAxis2_mo, null]
     ]);
@@ -259,6 +266,11 @@ var GraphsController = function ($scope, getGraphData) {
       style: {
         classes: "qtip-dark"
       }
+    });
+
+    window.addEventListener("resize", function () {
+        table.redraw();
+        table_mo.redraw();
     });
   });
 };

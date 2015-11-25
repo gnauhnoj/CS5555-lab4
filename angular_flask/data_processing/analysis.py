@@ -1,6 +1,7 @@
 import numpy as np
 import datetime
 import loader
+from math import floor
 from scipy import stats
 FIRST_DATE = datetime.date(2014, 11, 01)
 LAST_DATE = datetime.date(2015, 11, 17)
@@ -80,14 +81,14 @@ def handle_analysis_request(dataset, date_list):
 
     out = {}
     out['mean'] = {
-        'steps': mean_sy_steps,
-        'sed_act': mean_sy_sed_act,
-        'med_act': mean_sy_med_act
+        'steps': floor(mean_sy_steps),
+        'sed_act': floor(mean_sy_sed_act),
+        'med_act': floor(mean_sy_med_act)
     }
     out['diff'] = {
-        'steps': mean_sy_steps - np.mean(y_steps),
-        'sed_act': mean_sy_sed_act - np.mean(y_sed_act),
-        'med_act': mean_sy_med_act - np.mean(y_med_act)
+        'steps': floor(mean_sy_steps - np.mean(y_steps)),
+        'sed_act': floor(mean_sy_sed_act - np.mean(y_sed_act)),
+        'med_act': floor(mean_sy_med_act - np.mean(y_med_act))
     }
     out['ci_test'] = {
         'steps': test_point_ci(ci_steps, mean_sy_steps),
