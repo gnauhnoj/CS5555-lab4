@@ -20,6 +20,7 @@ var AnalysisController = function($scope, getAnalysisData, $location, $anchorScr
   $scope.formData.dates = [[null, null]];
 
   $scope.analysis = {};
+  console.log($scope.processed, $scope.formData)
 
   // add defaulting code - options - internship, school year, reset
 
@@ -35,11 +36,6 @@ var AnalysisController = function($scope, getAnalysisData, $location, $anchorScr
     getAnalysisData.retrieve($scope.formData, function(res) {
       $scope.analysis = res;
       $scope.processed = true;
-
-      // $location.hash('go-here');
-      // $anchorScroll();
-
-      window.location='#go-here';
     });
   };
 
