@@ -59,6 +59,10 @@ def test_point_ci(tuple, value):
         return 0
 
 
+def test_good_bad(good, value):
+    return good*value
+
+
 def handle_analysis_request(dataset, date_list):
     x, y_steps, y_sed_act, y_med_act = get_data_over_period(dataset, FIRST_DATE.isoformat(), LAST_DATE.isoformat())
     total_sy_steps = []
@@ -91,9 +95,9 @@ def handle_analysis_request(dataset, date_list):
         'med_act': floor(mean_sy_med_act - np.mean(y_med_act))
     }
     out['ci_test'] = {
-        'steps': test_point_ci(ci_steps, mean_sy_steps),
-        'sed_act': test_point_ci(ci_sed_act, mean_sy_sed_act),
-        'med_act': test_point_ci(ci_med_act, mean_sy_med_act)
+        'steps': test_good_bad(1, test_point_ci(ci_steps, mean_sy_steps)),
+        'sed_act': test_good_bad(-1, test_point_ci(ci_sed_act, mean_sy_sed_act)),
+        'med_act': test_good_bad(1, test_point_ci(ci_med_act, mean_sy_med_act))
     }
     return out
 

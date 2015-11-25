@@ -1,6 +1,6 @@
 <div class="container marketing">
   <div class="featurette">
-    <h2 class="featurette-heading pagination-centered"><span class="text-muted">Contextualize Your Activity</span> <br>
+    <h2 class="featurette-heading pagination-centered">Contextualize Your Activity<br>
       <h3 class="featurette-heading pagination-centered"><span class="text-muted">Give us a category and some corresponding dates:</span> </h3>
     </h2>
     <br>
@@ -39,35 +39,55 @@
     <hr id="go-here" class="featurette-divider">
 
     <div class="featurette">
-      <h2 class="featurette-heading pagination-centered"><span class="text-muted">For the Activity Category Provided - </span> {{formData.categoryLabel}} <br>
-        <h3 class="featurette-heading pagination-centered"><span class="text-muted">We found the following...</span> </h3>
+      <h2 class="featurette-heading pagination-centered">
+        <span class="text-muted">For the Activity Category Provided - </span>
+        <span style="font-weight: bold"> {{formData.categoryLabel}} </span>
+        <br>
+        <h3 class="featurette-heading pagination-centered">
+        <span class="text-muted">We found the following average daily statistics...</span>
+        </h3>
       </h2>
     </div>
     <br>
     <div class="featurette">
-      <h2 class="featurette-heading pagination-centered">Steps</h2>
-      <h2 class="glyphicon glyphicon-arrow-up"></h2>
-      <h2 class="glyphicon glyphicon-arrow-down"></h2>
-      <h2 class="glyphicon glyphicon-fire"></h2>
-      <h3 class="featurette-heading"><span class="text-muted">Average Daily Steps</span> {{analysis.mean.steps}}</h3>
+      <h2 class="featurette-heading pagination-centered">
+        <span>
+          <span style="font-weight: bold"> {{analysis.mean.steps}} </span>
+          <span class="text-muted"> Steps which is</span>
+          <h2 class="glyphicon glyphicon-arrow-up" ng-if="analysis.diff.steps > 0" style="color: green"></h2>
+          <h2 class="glyphicon glyphicon-arrow-down" ng-if="analysis.diff.steps < 0" style="color: red"></h2>
+          <span style="font-weight: bold"> {{ analysis.diff.steps | abs}} </span>
+          <h2 class="glyphicon glyphicon-fire" ng-if="analysis.ci_test.steps == 1" style="color: green"></h2>
+          <h2 class="glyphicon glyphicon-alert" ng-if="analysis.ci_test.steps == -1" style="color: red"></h2>
+          <span class="text-muted"> from your lifetime average </span>
+        </span>
+      </h2>
       <br>
-      <h3 class="featurette-heading pull-right">{{ analysis.diff.steps }} <span class="text-muted">Different from your Lifetime Average</span></h3>
+      <h2 class="featurette-heading pagination-centered">
+        <span>
+          <span style="font-weight: bold"> {{analysis.mean.med_act}} </span>
+          <span class="text-muted"> Active Minutes which is</span>
+          <h2 class="glyphicon glyphicon-arrow-up" ng-if="analysis.diff.med_act > 0" style="color: green"></h2>
+          <h2 class="glyphicon glyphicon-arrow-down" ng-if="analysis.diff.med_act < 0" style="color: red"></h2>
+          <span style="font-weight: bold"> {{ analysis.diff.med_act | abs}} </span>
+          <h2 class="glyphicon glyphicon-fire" ng-if="analysis.ci_test.med_act == 1" style="color: green"></h2>
+          <h2 class="glyphicon glyphicon-alert" ng-if="analysis.ci_test.med_act == -1" style="color: red"></h2>
+          <span class="text-muted"> from your lifetime average </span>
+        </span>
+      </h2>
       <br>
-      <h3 class="featurette-heading pull-left"><span class="text-muted">This difference is: </span> {{ analysis.ci_test.steps }} </h3>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="featurette">
-      <h2 class="featurette-heading pagination-centered">Activity Time</h2>
-      <h3 class="featurette-heading"><span class="text-muted">Average Inactivity Time</span> {{analysis.mean.sed_act}}</h3>
-      <h3 class="featurette-heading"><span class="text-muted">Average Moderate Activity Time</span> {{analysis.mean.med_act}}</h3>
-      <br>
-      <h3 class="featurette-heading pull-right">{{ analysis.diff.sed_act }} <span class="text-muted">Different from your Lifetime Average</span></h3>
-      <h3 class="featurette-heading pull-right">{{ analysis.diff.med_act }} <span class="text-muted">Different from your Lifetime Average</span></h3>
-      <br>
-      <h3 class="featurette-heading pull-left"><span class="text-muted">This difference is: </span> {{ analysis.ci_test.sed_act }} </h3>
-      <h3 class="featurette-heading pull-left"><span class="text-muted">This difference is: </span> {{ analysis.ci_test.med_act }} </h3>
+      <h2 class="featurette-heading pagination-centered">
+        <span>
+          <span style="font-weight: bold"> {{analysis.mean.sed_act}} </span>
+          <span class="text-muted"> Inactive Minutes which is</span>
+          <h2 class="glyphicon glyphicon-arrow-up" ng-if="analysis.diff.sed_act > 0" style="color: red"></h2>
+          <h2 class="glyphicon glyphicon-arrow-down" ng-if="analysis.diff.sed_act < 0" style="color: green"></h2>
+          <span style="font-weight: bold"> {{ analysis.diff.sed_act | abs}} </span>
+          <h2 class="glyphicon glyphicon-fire" ng-if="analysis.ci_test.sed_act == 1" style="color: green"></h2>
+          <h2 class="glyphicon glyphicon-alert" ng-if="analysis.ci_test.sed_act == -1" style="color: red"></h2>
+          <span class="text-muted"> from your lifetime average </span>
+        </span>
+      </h2>
     </div>
 
     <hr class="featurette-divider">

@@ -37,10 +37,12 @@ var AnalysisController = function($scope, getAnalysisData, $location, $anchorScr
   };
 
   $scope.preset_school = function() {
+    $scope.formData.categoryLabel = 'School In Session';
     $scope.formData.dates = dateIfy([['2014-08-26', '2014-12-12'], ['2015-01-21', '2015-05-06'], ['2015-08-25', '2015-12-04']]);
   };
 
   $scope.preset_internship = function() {
+    $scope.formData.categoryLabel = 'Intern Season';
     $scope.formData.dates = dateIfy([['2015-05-26', '2015-08-14']]);
   };
 };
@@ -60,19 +62,19 @@ var RecommendationsController = function($scope, getReccData) {
     $('#medact').circliful();
 
     if (data.recent.steps_ci === 1){
-      $('#recent-steps').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>')
+      $('#recent-steps').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>');
     }else if (data.recent.steps_ci === -1){
-      $('#recent-steps').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>')
+      $('#recent-steps').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>');
     }
     if (data.recent.med_act_ci === 1){
-      $('#recent-med-act').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>')
+      $('#recent-med-act').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>');
     }else if (data.recent.med_act_ci === -1){
-      $('#recent-med-act').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>')
+      $('#recent-med-act').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>');
     }
     if (data.recent.sed_act_ci === 1){
-      $('#recent-sed-act').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>')
+      $('#recent-sed-act').append('<h2 class="glyphicon glyphicon-arrow-up"></h2>');
     }else if (data.recent.sed_act_ci === -1){
-      $('#recent-sed-act').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>')
+      $('#recent-sed-act').append('<h2 class="glyphicon glyphicon-arrow-down"></h2>');
     }
   });
 };
