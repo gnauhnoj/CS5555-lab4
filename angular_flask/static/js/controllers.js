@@ -20,9 +20,6 @@ var AnalysisController = function($scope, getAnalysisData, $location, $anchorScr
   $scope.formData.dates = [[null, null]];
 
   $scope.analysis = {};
-  console.log($scope.processed, $scope.formData)
-
-  // add defaulting code - options - internship, school year, reset
 
   $scope.addDate = function() {
     $scope.formData.dates.push([null, null]);

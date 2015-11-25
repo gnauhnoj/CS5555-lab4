@@ -18,8 +18,8 @@
             <input type="date" class="form-control short-form" name="start" ng-model="date[0]" placeholder="yyyy-MM-dd" required>
             <input type="date" class="form-control short-form" name="end" ng-model="date[1]" placeholder="yyyy-MM-dd" min="{{ date[0] }}" required>
           </ng-form>
-          <div ng-click="deleteDate()" class="btn btn-xs btn-danger">
-            <span class="glyphicon glyphicon-trash"></span>&nbsp;
+          <div ng-click="deleteDate()" class="btn btn-danger">
+            <span class="glyphicon glyphicon-trash"></span>
           </div>
         </div>
       </form>
@@ -46,6 +46,9 @@
     <br>
     <div class="featurette">
       <h2 class="featurette-heading pagination-centered">Steps</h2>
+      <h2 class="glyphicon glyphicon-arrow-up"></h2>
+      <h2 class="glyphicon glyphicon-arrow-down"></h2>
+      <h2 class="glyphicon glyphicon-fire"></h2>
       <h3 class="featurette-heading"><span class="text-muted">Average Daily Steps</span> {{analysis.mean.steps}}</h3>
       <br>
       <h3 class="featurette-heading pull-right">{{ analysis.diff.steps }} <span class="text-muted">Different from your Lifetime Average</span></h3>
