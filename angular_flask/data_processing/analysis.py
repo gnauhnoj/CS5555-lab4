@@ -3,8 +3,10 @@ import datetime
 import loader
 from math import floor
 from scipy import stats
-FIRST_DATE = datetime.date(2014, 11, 01)
-LAST_DATE = datetime.date(2015, 11, 24)
+from angular_flask import FIRST_DATE, LAST_DATE
+
+FIRST_DATE = datetime.date(FIRST_DATE.year, FIRST_DATE.month, FIRST_DATE.day)
+LAST_DATE = datetime.date(LAST_DATE.year, LAST_DATE.month, LAST_DATE.day)
 
 
 # calculate confidence interval

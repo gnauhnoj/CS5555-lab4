@@ -5,7 +5,7 @@ from flask import render_template, send_from_directory, url_for
 from data_processing.loader import load_files
 
 app = Flask(__name__)
-data = load_files()
+data, FIRST_DATE, LAST_DATE = load_files()
 
 app.config.from_object('angular_flask.settings')
 
