@@ -8,17 +8,7 @@ from data_processing.analysis import get_data_over_period, handle_analysis_reque
 from angular_flask import app, data
 
 # routing for API endpoints, generated from the models designated as API_MODELS
-# from angular_flask.core import api_manager
 from angular_flask.models import *
-
-# from sqlalchemy.sql import exists
-
-
-# for model_name in app.config['API_MODELS']:
-#     model_class = app.config['API_MODELS'][model_name]
-#     api_manager.create_api(model_class, methods=['GET', 'POST'])
-
-# session = api_manager.session
 
 
 # routing for basic pages (pass routing onto the Angular app)
@@ -54,18 +44,6 @@ def graph_data():
 def recc_data():
     out = handle_recc_request(data)
     return json.dumps(out)
-
-
-# @app.route('/<model_name>/')
-# @app.route('/<model_name>/<item_id>')
-# def rest_pages(model_name, item_id=None):
-#     if model_name in crud_url_models:
-#         model_class = crud_url_models[model_name]
-#         if item_id is None or session.query(exists().where(
-#                 model_class.id == item_id)).scalar():
-#             return make_response(open(
-#                 'angular_flask/templates/index.html').read())
-#     abort(404)
 
 
 # special file handlers and error handlers
