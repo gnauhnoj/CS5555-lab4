@@ -4,15 +4,13 @@ import loader
 from math import floor
 from scipy import stats
 FIRST_DATE = datetime.date(2014, 11, 01)
-LAST_DATE = datetime.date(2015, 11, 17)
+LAST_DATE = datetime.date(2015, 11, 24)
 
 
 # calculate confidence interval
 def calculate_ci(data, level=0.95):
     a = 1.0*np.array(data)
     n = len(a)
-    # Question for Jing: Can we do without this? Installing scipy is so annoying to deploy
-    # need to think about it...
     m, se = np.mean(a), stats.sem(a)
     h = se*stats.t._ppf((1+level)/2., n-1)
     return m-h, m+h
