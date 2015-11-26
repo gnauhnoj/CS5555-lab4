@@ -32,10 +32,10 @@ class Stats(object):
 
 def load_json(filename, rows, label):
     label = 'activity'
+    # earliest,
     with open(filename, 'rb') as f:
         data = json.load(f)
         data = data['body']
-        # i hate these if statements...
         for datum in data:
             datum = datum['result']
             date = datum['date']
