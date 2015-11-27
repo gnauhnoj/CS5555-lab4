@@ -54,11 +54,11 @@ var RecommendationsController = function($scope, getReccData) {
     var steps_pct = parseFloat(data.month.steps)/(parseFloat(data.last.steps)) *100;
     var med_act_pct = parseFloat(data.month.med_act)/(parseFloat(data.last.med_act)) * 100;
     $('#steps').attr('data-percent', steps_pct);
-    $('#steps').attr('data-text', Math.round(data.month.steps, 0));
+    $('#steps').attr('data-text', Math.round(steps_pct, 0)+'%');
     $('#steps').circliful();
 
     $('#medact').attr('data-percent', med_act_pct);
-    $('#medact').attr('data-text', Math.round(data.month.med_act, 0));
+    $('#medact').attr('data-text', Math.round(med_act_pct, 0)+'%');
     $('#medact').circliful();
   });
 };
